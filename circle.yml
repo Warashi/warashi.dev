@@ -18,8 +18,9 @@ checkout:
     - git submodule update --init --recursive
 
 compile:
-  override:
+  pre:
     - cd public && git checkout master
+  override:
     - hugo
 
 deployment:
