@@ -19,6 +19,7 @@ checkout:
 
 compile:
   override:
+    - cd public && git checkout master
     - hugo
 
 deployment:
