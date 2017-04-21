@@ -29,5 +29,7 @@ deployment:
         pwd: public
       - git commit -m 'CircleCI update':
         pwd: public
+      - git push:
+        pwd: public
 
 
