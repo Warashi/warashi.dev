@@ -4,11 +4,6 @@ machine:
     PATH: ${HOME}/.local/bin:${PATH}
     VERSION: '0.20.2'
 
-general:
-  branches:
-    only:
-      - source
-
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.20.2/hugo_0.20.2_Linux-64bit.tar.gz
