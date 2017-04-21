@@ -25,8 +25,8 @@ deployment:
   production:
     branch: source
     commands:
-      - git submodule foreach git add -A
-      - git submodule foreach git commit -m 'CircleCI update'
-      - git submodule foreach git push
+      - cd public && git add -A
+      - cd public && git commit -m 'CircleCI update'
+      - cd public && git push
 
 
