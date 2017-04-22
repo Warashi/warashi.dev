@@ -5,6 +5,8 @@ title = "やる気 Not Found"
 paginate = 10
 copyright = "© 2016 Copyright warashi"
 canonifyurls = true
+enableEmoji = true
+hasCJKLanguage = true
 # googleAnalytics = "Your Tracking Id" # optional
 
 # optional
