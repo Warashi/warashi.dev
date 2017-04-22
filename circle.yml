@@ -4,6 +4,11 @@ machine:
     PATH: ${HOME}/.local/bin:${PATH}
     VERSION: '0.20.2'
 
+general:
+  branches:
+    ignore:
+      - master
+
 dependencies:
   pre:
     - git config --global user.email '6warashi9@gmail.com'
@@ -19,7 +24,7 @@ checkout:
 
 compile:
   pre:
-    - cd public && git fetch && git checkout master
+    - cd public && git checkout master && git pull
   override:
     - hugo
 
