@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>やる気 Not Found</title>
+    <link>https://warashi.github.io/</link>
+    <description>Recent content on やる気 Not Found</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>© 2016 Copyright warashi</copyright>
+    
+	<atom:link href="https://warashi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
