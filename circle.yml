@@ -19,9 +19,13 @@ checkout:
 
 compile:
   pre:
-    - cd public && git checkout master
+    - cd public && git fetch && git checkout master
   override:
     - hugo
+
+test:
+  post:
+    - echo 'there is no test'
 
 deployment:
   production:
