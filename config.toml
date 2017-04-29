@@ -9,15 +9,14 @@ enableEmoji = true
 hasCJKLanguage = true
 # googleAnalytics = "Your Tracking Id" # optional
 
+[blackfriday]
+  hrefTargetBlank = true
+
 # optional
 [[menu.header]]
   name = "Tag"
   weight = 1
   url = "/tags/"
-[[menu.header]]
-  name = "Category"
-  weight = 2
-  url = "/categories/"
 
 # optional
 [social]
