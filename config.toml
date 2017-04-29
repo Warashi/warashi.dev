@@ -1,6 +1,6 @@
 theme="amp"
 languageCode = "ja-JP"
-baseurl = "https://warashi.github.io"
+baseurl = "https://warashi.github.io/"
 title = "やる気 Not Found"
 paginate = 10
 copyright = "© 2016 Copyright warashi"
