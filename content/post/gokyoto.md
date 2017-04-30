@@ -77,6 +77,8 @@ csvっぽい形式を読み込んだりすることはあったんですが、 e
 インターン生の書いたブログ記事は[これ](http://blog.upamune.com/entry/2017/04/07/165658)っぽい。
 
 ### パッケージの公開方法 (by [kwmt27さん](//twitter.com/kwmt27))
+[資料](//go-talks.appspot.com/github.com/kwmt/go-talks/2017/souda-kyoto-go.slide)
+
 なんと14:30ごろに参加申し込みしてLTなされている。すごい。
 パッケージの公開方法についての話でした。
 
