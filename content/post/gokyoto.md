@@ -11,6 +11,8 @@ title = "「そうだ Go、京都。」参加報告"
 ## LTじゃないやつ
 
 ### String::Random の Go 版を作った話 (by [tさん](//twitter.com/t_snzk))
+[ご本人の解説記事](http://blog.yux3.net/entry/2017/05/01/014200)
+
 [String::Random](//metacpan.org/pod/String::Random) という Perl のモジュールがあって、それを Go に移植したという話でした。
 実装はこちら ([gocha](//github.com/t-mrt/gocha))
 
@@ -37,6 +39,8 @@ githubの草を生やす活動を始めたので、それについての話と�
 - 無理すると続かないので無理しなくなる
 
 ### REST is not only (web) API interface (by [kadotaさん](//twitter.com/plan9user))
+[資料](//speakerdeck.com/lufia/rest-is-not-only-web-api-interface)
+
 プッシュ配信システムで REST API は辛いよ、とのこと
 
 どう辛いかというと、シンプルに 1 request / 1 message / 1 user とすると、大量の request が発生する。
