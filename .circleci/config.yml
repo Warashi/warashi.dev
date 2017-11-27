@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 6warashi9/docker-alpine-hugo-git-ssh
+      - image: 6warashi9/docker-alpine-hugo-git-ssh-rsync
     working_directory: ~/project
     steps:
       - add_ssh_keys
