@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: andthensome/alpine-hugo-git-bash:0.30.1
+      - image: 6warashi9/docker-alpine-hugo-git-ssh
     working_directory: ~/project
     steps:
       - add_ssh_keys
