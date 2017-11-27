@@ -22,7 +22,7 @@ jobs:
           command: cd public && git checkout master && git pull
       - run:
           name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s ~/project/src/
+          command: HUGO_ENV=production hugo -v
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "source" ]; then
