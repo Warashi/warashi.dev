@@ -1,0 +1,43 @@
+machine:
+  timezone: Asia/Tokyo
+  environment:
+    PATH: ${HOME}/.local/bin:${PATH}
+    VERSION: '0.20.2'
+
+general:
+  branches:
+    ignore:
+      - master
+
+dependencies:
+  pre:
+    - git config --global user.email '6warashi9@gmail.com'
+    - git config --global user.name 'CircleCI'
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.2/hugo_0.20.2_Linux-64bit.tar.gz
+    - tar -xzf hugo_${VERSION}_Linux-64bit.tar.gz
+    - mkdir ${HOME}/.local/bin && mv hugo_${VERSION}_linux_amd64/hugo_${VERSION}_linux_amd64 ${HOME}/.local/bin/hugo
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init --recursive
+
+compile:
+  pre:
+    - cd public && git checkout master && git pull
+  override:
+    - hugo
+
+test:
+  post:
+    - echo 'there is no test'
+
+deployment:
+  production:
+    branch: source
+    commands:
+      - cd public && git add -A
+      - cd public && git commit -m 'CircleCI update'
+      - cd public && git push
+
+
