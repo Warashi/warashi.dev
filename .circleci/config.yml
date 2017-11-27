@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: felicianotech/docker-hugo:0.21
+      - image: andthensome/alpine-hugo-git-bash:0.30.1
     working_directory: ~/project
     steps:
       - checkout
