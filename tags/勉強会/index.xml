@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>勉強会 on やる気 Not Found</title>
+    <link>https://warashi.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+    <description>Recent content in 勉強会 on やる気 Not Found</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>© 2016 Copyright warashi</copyright>
+    <lastBuildDate>Sat, 29 Apr 2017 20:15:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://warashi.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>「そうだ Go、京都。」参加報告</title>
+      <link>https://warashi.github.io/post/gokyoto/</link>
+      <pubDate>Sat, 29 Apr 2017 20:15:58 +0900</pubDate>
+      
+      <guid>https://warashi.github.io/post/gokyoto/</guid>
+      <description>本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。 LTじゃないやつ String::Random の Go 版を作った話</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,7 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:Warashi/warashi.github.io
-	branch = master
-[submodule "themes/amp"]
-	path = themes/amp
-	url = https://github.com/pdevty/amp.git
