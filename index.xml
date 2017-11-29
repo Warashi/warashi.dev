@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2016 Copyright warashi</copyright>
-    <lastBuildDate>Sat, 29 Apr 2017 20:15:58 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2017 18:57:20 +0900</lastBuildDate>
     
 	<atom:link href="https://warashi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CircleCI 2.0</title>
+      <link>https://warashi.github.io/post/circleci-2.0/</link>
+      <pubDate>Wed, 29 Nov 2017 18:57:20 +0900</pubDate>
+      
+      <guid>https://warashi.github.io/post/circleci-2.0/</guid>
+      <description>このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン</description>
+    </item>
     
     <item>
       <title>「そうだ Go、京都。」参加報告</title>

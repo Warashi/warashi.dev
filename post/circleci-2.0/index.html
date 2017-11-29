@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html ⚡>
 <head>
-	<meta name="generator" content="Hugo 0.31.1" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
 
-  <title>やる気 Not Found</title>
-  <link rel="canonical" href="https://warashi.github.io/">
+  <title>CircleCI 2.0</title>
+  <link rel="canonical" href="https://warashi.github.io/post/circleci-2.0/">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet" type="text/css">
 
@@ -108,51 +107,34 @@
       <div class="container">
 
 <div class="blog">
-  <div class="blog__tabs">
+  <h1>CircleCI 2.0</h1>
+  <p>Wed, Nov 29, 2017</p>
+  <p>
     
-      <a class="blog__tab" href="https://warashi.github.io/post/circleci-2.0/">       
-  <h3 class="blog__title">CircleCI 2.0</h3>
-  <div class="blog__subtitle">Wed, Nov 29, 2017</div>
-  <div class="blog__subtitle">
-    
-    
-  </div>
-</a>
+            
+  </p>
+  <p>このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
+移行のためにDockerコンテナを作るところから始める、というちょっと面倒な事態になりましたが、なんとか移行完了したのでちょっと記事書くかなって感じです。</p>
 
-    
-      <a class="blog__tab" href="https://warashi.github.io/post/gokyoto/">       
-  <h3 class="blog__title">「そうだ Go、京都。」参加報告</h3>
-  <div class="blog__subtitle">Sat, Apr 29, 2017</div>
-  <div class="blog__subtitle">
-    
-    
-      
-        #Go
-      
-        #勉強会
-      
-    
-  </div>
-</a>
+<p>まず先にこのブログのリポジトリ構成をちょっと書いておくと、sourceブランチにHugoに渡すMarkdownとかがあって、masterブランチには生成されたHTMLとかがある、という構成になってます。
+つまり、sourceブランチを取ってきて、Hugoを走らせて、結果public以下にできるファイル群をmasterブランチにpushすればいいことになります。</p>
 
-    
-      <a class="blog__tab" href="https://warashi.github.io/post/blog_created/">       
-  <h3 class="blog__title">ブログはじめました</h3>
-  <div class="blog__subtitle">Sat, Apr 22, 2017</div>
-  <div class="blog__subtitle">
-    
-    
-  </div>
-</a>
+<p>これをするために作ったDockerコンテナのGitHubリポジトリが<a href="https://github.com/Warashi/docker-alpine-hugo-git-ssh-rsync" target="_blank">こちら</a>。
+とりあえずalpineで、なんとなく使いそうだったコマンドを入れてある感じになります。</p>
 
-    
-  </div>
+<p>そして、CircleCIの設定ファイルが<a href="https://github.com/Warashi/warashi.github.io/blob/source/.circleci/config.yml" target="_blank">こちら</a>。
+これを参考にしてもらえば、このブログと同じことができるはずになってます。</p>
+
+<p>誰かの助けになれば幸いです。</p>
+
 </div>
-<div class="pagination">
-  <a></a>
-  <span class="number">1 / 1</span>  
-  <a></a>
-</div>
+
+  <br/><br/>
+  <div class="pagination">
+    <a></a>
+    <a class="next" href="https://warashi.github.io/post/gokyoto/">「そうだ Go、京都。」参加報告</a>
+  </div>
+
       </div>
     </section>
     <footer>

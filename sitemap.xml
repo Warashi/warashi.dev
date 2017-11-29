@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://warashi.github.io/post/circleci-2.0/</loc>
+    <lastmod>2017-11-29T18:57:20+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://warashi.github.io/post/gokyoto/</loc>
     <lastmod>2017-04-29T20:15:58+09:00</lastmod>
   </url>
@@ -25,7 +30,7 @@
   
   <url>
     <loc>https://warashi.github.io/post/</loc>
-    <lastmod>2017-04-29T20:15:58+09:00</lastmod>
+    <lastmod>2017-11-29T18:57:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -37,7 +42,7 @@
   
   <url>
     <loc>https://warashi.github.io/</loc>
-    <lastmod>2017-04-29T20:15:58+09:00</lastmod>
+    <lastmod>2017-11-29T18:57:20+09:00</lastmod>
     <priority>0</priority>
   </url>
   
