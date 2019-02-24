@@ -27,12 +27,18 @@ jobs:
       - add_ssh_keys
       - attach_workspace:
           at: ~/public
+      - run:
+          name: "init netrc"
+          command: |
+            echo machine github.com >> ${HOME}/.netrc
+            echo login ${GITHUB_USER} >> ${HOME}/.netrc
+            echo password ${GITHUB_TOKEN} >> ${HOME}/.netrc
       - deploy:
           name: "deploy"
           command: |
             git config --global user.email '6warashi9@gmail.com'
             git config --global user.name 'CircleCI'
-            git clone -b master 'git@github.com:Warashi/warashi.github.io' ~/repository
+            git clone -b master 'https://github.com:Warashi/warashi.github.io' ~/repository
             cd ~/repository
             git checkout -b update/${CIRCLE_SHA1}
             rsync -va --delete --exclude '.git' ~/public/ ~/repository/
