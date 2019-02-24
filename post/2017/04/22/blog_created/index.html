@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://warashi.github.io/2017/11/29/circleci-2.0/">
+  <link rel="canonical" href="https://warashi.github.io/post/2017/04/22/blog_created/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>CircleCI 2.0 | やる気 Not Found</title>
+  <title>ブログはじめました | 404 やる気 Not Found</title>
 </head>
 
   <body>
@@ -130,7 +130,7 @@
       <header class="intro-and-nav" role="banner">
   <div>
     <div class="intro">
-      <a class="logo" href="https://warashi.github.io/" aria-label="やる気 Not Found home page">
+      <a class="logo" href="https://warashi.github.io/" aria-label="404 やる気 Not Found home page">
         <img src="https://warashi.github.io/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
@@ -225,11 +225,11 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      CircleCI 2.0
+      ブログはじめました
     </h1>
     <div class="date">
       
-      <strong aria-hidden="true">Publish date: </strong>2017/11/29
+      <strong aria-hidden="true">Publish date: </strong>2017/04/22
     </div>
     
     
@@ -238,19 +238,18 @@
 
 
     
-    <p>このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
-移行のためにDockerコンテナを作るところから始める、というちょっと面倒な事態になりましたが、なんとか移行完了したのでちょっと記事書くかなって感じです。</p>
+    <p><a href="//gohugo.io" rel="nofollow noreferrer" target="_blank">Hugo</a> を使ってブログを始めました。
+ブログの生成元ファイル群は<a href="//github.com/Warashi/warashi.github.io" rel="nofollow noreferrer" target="_blank">ここ</a>にあります。
+<a href="//ciecleci.com" rel="nofollow noreferrer" target="_blank">Circle CI</a> を使って1リポジトリの複数ブランチでソースと生成結果を管理してます。
+よかったら参考にどうぞ。</p>
 
-<p>まず先にこのブログのリポジトリ構成をちょっと書いておくと、sourceブランチにHugoに渡すMarkdownとかがあって、masterブランチには生成されたHTMLとかがある、という構成になってます。
-つまり、sourceブランチを取ってきて、Hugoを走らせて、結果public以下にできるファイル群をmasterブランチにpushすればいいことになります。</p>
+<p>Theme には <a href="//github.com/pdevty/amp" rel="nofollow noreferrer" target="_blank">AMP</a> を使ってます。
+シンプルでよいテーマだと思います。</p>
 
-<p>これをするために作ったDockerコンテナのGitHubリポジトリが<a href="https://github.com/Warashi/docker-alpine-hugo-git-ssh-rsync" rel="nofollow noreferrer" target="_blank">こちら</a>。
-とりあえずalpineで、なんとなく使いそうだったコマンドを入れてある感じになります。</p>
+<p>ちょっとだけ説明しておくと、<code>public</code>ディレクトリを<code>submodule</code>にしておいて、更新の直前で<code>git checkout master</code>するっていうなんとも変則的な方法を使ってます。
+なんとなく<code>circle.yml</code>や環境変数にリポジトリ名を入れたくなかったのでこうなりました。</p>
 
-<p>そして、CircleCIの設定ファイルが<a href="https://github.com/Warashi/warashi.github.io/blob/source/.circleci/config.yml" rel="nofollow noreferrer" target="_blank">こちら</a>。
-これを参考にしてもらえば、このブログと同じことができるはずになってます。</p>
-
-<p>誰かの助けになれば幸いです。</p>
+<p>どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。</p>
 
   </main>
 

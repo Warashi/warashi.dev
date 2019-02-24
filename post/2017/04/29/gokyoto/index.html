@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://warashi.github.io/2017/04/22/blog_created/">
+  <link rel="canonical" href="https://warashi.github.io/post/2017/04/29/gokyoto/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>ブログはじめました | やる気 Not Found</title>
+  <title>「そうだ Go、京都。」参加報告 | 404 やる気 Not Found</title>
 </head>
 
   <body>
@@ -130,7 +130,7 @@
       <header class="intro-and-nav" role="banner">
   <div>
     <div class="intro">
-      <a class="logo" href="https://warashi.github.io/" aria-label="やる気 Not Found home page">
+      <a class="logo" href="https://warashi.github.io/" aria-label="404 やる気 Not Found home page">
         <img src="https://warashi.github.io/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
@@ -225,31 +225,171 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      ブログはじめました
+      「そうだ Go、京都。」参加報告
     </h1>
     <div class="date">
       
-      <strong aria-hidden="true">Publish date: </strong>2017/04/22
+      <strong aria-hidden="true">Publish date: </strong>2017/04/29
     </div>
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://warashi.github.io/tags/go">Go</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://warashi.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a>
+            </li>
+          
+        </ul>
+      </div>
     
     
     
       
 
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          <a href="#lt%25E3%2581%2598%25E3%2582%2583%25E3%2581%25AA%25E3%2581%2584%25E3%2582%2584%25E3%2581%25A4">
+            LTじゃないやつ
+          </a>
+        </li>
+      
+        <li>
+          <a href="#lt">
+            LT
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
 
     
-    <p><a href="//gohugo.io" rel="nofollow noreferrer" target="_blank">Hugo</a> を使ってブログを始めました。
-ブログの生成元ファイル群は<a href="//github.com/Warashi/warashi.github.io" rel="nofollow noreferrer" target="_blank">ここ</a>にあります。
-<a href="//ciecleci.com" rel="nofollow noreferrer" target="_blank">Circle CI</a> を使って1リポジトリの複数ブランチでソースと生成結果を管理してます。
-よかったら参考にどうぞ。</p>
+    
 
-<p>Theme には <a href="//github.com/pdevty/amp" rel="nofollow noreferrer" target="_blank">AMP</a> を使ってます。
-シンプルでよいテーマだと思います。</p>
+<p>本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。</p>
 
-<p>ちょっとだけ説明しておくと、<code>public</code>ディレクトリを<code>submodule</code>にしておいて、更新の直前で<code>git checkout master</code>するっていうなんとも変則的な方法を使ってます。
-なんとなく<code>circle.yml</code>や環境変数にリポジトリ名を入れたくなかったのでこうなりました。</p>
+<h2 id="ltじゃないやつ">LTじゃないやつ</h2>
 
-<p>どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。</p>
+<h3 id="string-random-の-go-版を作った話-by-tさん-twitter-com-t-snzk">String::Random の Go 版を作った話 (by <a href="//twitter.com/t_snzk" rel="nofollow noreferrer" target="_blank">tさん</a>)</h3>
+
+<p><a href="http://blog.yux3.net/entry/2017/05/01/014200" rel="nofollow noreferrer" target="_blank">ご本人の解説記事</a></p>
+
+<p><a href="//metacpan.org/pod/String::Random" rel="nofollow noreferrer" target="_blank">String::Random</a> という Perl のモジュールがあって、それを Go に移植したという話でした。
+実装はこちら (<a href="//github.com/t-mrt/gocha" rel="nofollow noreferrer" target="_blank">gocha</a>)</p>
+
+<ol>
+<li>String::Random は正規表現に従ってランダムな文字列を生成するモジュールで、それをGoに移植するに当たってはじめは正規表現のパーサなどを実装していた。</li>
+<li>とりあえずの実装はできたが、Unicode文字プロパティなどの対応が大変。さてどうするか。</li>
+<li><strong>Goの標準ライブラリにはGoで書かれた正規表現エンジンがある。</strong></li>
+<li>Goの<code>regexp</code>パッケージはVMなので、それを利用して文字列生成をする。</li>
+<li>Unicode文字プロパティもiオプションも対応できた！</li>
+</ol>
+
+<h3 id="毎日-go-を書く-by-yuukiさん-twitter-com-y-uuk1">毎日 Go を書く (by <a href="//twitter.com/y_uuk1" rel="nofollow noreferrer" target="_blank">yuukiさん</a>)</h3>
+
+<p>githubの草を生やす活動を始めたので、それについての話とのこと</p>
+
+<h4 id="大事なこと">大事なこと</h4>
+
+<ul>
+<li>1 commit / 1 day でもいいので毎日書くことが大事。継続は力なり。</li>
+<li>モチベーションが大事なので、それが維持されるなら <code>git commit --date</code> もあり。ただしやり過ぎ厳禁。</li>
+<li>平日にはあまり時間がとれないので、土日に細かいIssueを用意しておいて平日に消化</li>
+<li>一つのプロジェクトだと行き詰まったときに継続できなくなるので複数のプロジェクトを持つ</li>
+<li>作るもののネタを見つけるのが大変
+
+<ul>
+<li>業務で課題を見つけてそれを汎用化して解くなど</li>
+</ul></li>
+</ul>
+
+<h4 id="利点">利点</h4>
+
+<ul>
+<li>脳内メモリに乗った状態が保持されるので、次に書くときに悩まない</li>
+<li>小さな変更を積み重ねる癖がつく</li>
+<li>無理すると続かないので無理しなくなる</li>
+</ul>
+
+<h3 id="rest-is-not-only-web-api-interface-by-kadotaさん-twitter-com-plan9user">REST is not only (web) API interface (by <a href="//twitter.com/plan9user" rel="nofollow noreferrer" target="_blank">kadotaさん</a>)</h3>
+
+<p><a href="//speakerdeck.com/lufia/rest-is-not-only-web-api-interface" rel="nofollow noreferrer" target="_blank">資料</a></p>
+
+<p>プッシュ配信システムで REST API は辛いよ、とのこと</p>
+
+<p>どう辛いかというと、シンプルに 1 request / 1 message / 1 user とすると、大量の request が発生する。
+他のもの、たとえば gRPC, QraphQL などを使うことも検討に入れましょう。</p>
+
+<h3 id="go-で軽量マークアップ言語のパーサを書く-by-aerealさん-twitter-com-aereal">Go で軽量マークアップ言語のパーサを書く (by <a href="//twitter.com/aereal" rel="nofollow noreferrer" target="_blank">aerealさん</a>)</h3>
+
+<p><a href="//b.hatena.ne.jp/aereal/2017gokyoto/" rel="nofollow noreferrer" target="_blank">参考文献</a></p>
+
+<p>Go ではてな記法のパーサを書いたという話でした。
+実装はこちら (<a href="//github.com/aereal/go-text-hatena" rel="nofollow noreferrer" target="_blank">go-text-hatena</a>)</p>
+
+<p>はてな記法にははっきりとした定義がなく、実装が定義。
+数えられるだけでも7つの実装がある。辛い。</p>
+
+<p>実装には、goyacc および <code>text/scanner</code> パッケージを用いている。
+インデントでネストを表現する場合はyaccでは辛いが、はてな記法はマーカ (+記号など) を重複させてネストを表現するという記法であり、それに助けられた。
+標準入力から受け取って、ASTをJSON形式で標準出力にはき出すのでツールから使いやすい。</p>
+
+<hr />
+
+<h2 id="lt">LT</h2>
+
+<p>LTはメモ取ってなかったので完全に資料頼りの感想です。</p>
+
+<h3 id="encoding-csv-by-pinzoloさん-twitter-com-pinzolo">encoding/csv (by <a href="//twitter.com/pinzolo" rel="nofollow noreferrer" target="_blank">pinzoloさん</a>)</h3>
+
+<p><a href="//speakerdeck.com/pinzolo/csv" rel="nofollow noreferrer" target="_blank">資料</a></p>
+
+<p><code>csv.Reader</code>, <code>csv.Writer</code> が <code>io.Reader</code>, <code>io.Writer</code> ではないのは知ってたんですが、改めて言われると不思議な感じですね。
+csvっぽい形式を読み込んだりすることはあったんですが、 encoding/csv は発表であったとおり融通がきかなくて使ってませんでした。
+というか、ちゃんとしたcsvじゃなくてそれっぽい形式を扱ってただけだったのが大きい。
+また使ってみようと思います。</p>
+
+<h3 id="server-push-middleware-plasma-by-stormcat24さん-twitter-com-stormcat24">Server Push Middleware &ldquo;Plasma&rdquo; (by <a href="//twitter.com/stormcat24" rel="nofollow noreferrer" target="_blank">stormcat24さん</a>)</h3>
+
+<p><a href="//speakerdeck.com/stormcat24/server-push-middleware-plasma" rel="nofollow noreferrer" target="_blank">資料</a></p>
+
+<p>東京から来ててすごいなって思ったら天皇賞のついでらしかった。
+ポーリング撲滅のためにミドルウェアを作ったって話でした。
+作ったとはいうものの、実装は<a href="//twitter.com/upamune" rel="nofollow noreferrer" target="_blank">インターン生</a>がほぼ一人でやったとのこと。すごい。
+インターン生の書いたブログ記事は<a href="http://blog.upamune.com/entry/2017/04/07/165658" rel="nofollow noreferrer" target="_blank">これ</a>っぽい。</p>
+
+<h3 id="パッケージの公開方法-by-kwmt27さん-twitter-com-kwmt27">パッケージの公開方法 (by <a href="//twitter.com/kwmt27" rel="nofollow noreferrer" target="_blank">kwmt27さん</a>)</h3>
+
+<p><a href="//go-talks.appspot.com/github.com/kwmt/go-talks/2017/souda-kyoto-go.slide" rel="nofollow noreferrer" target="_blank">資料</a></p>
+
+<p>なんと14:30ごろに参加申し込みしてLTなされている。すごい。
+パッケージの公開方法についての話でした。</p>
+
+<h3 id="そうだ-go-再確認-by-qt-luigiさん-twitter-com-qt-luigi">そうだ Go、再確認。 (by <a href="//twitter.com/qt_luigi" rel="nofollow noreferrer" target="_blank">qt_luigiさん</a>)</h3>
+
+<p><a href="//speakerdeck.com/qt_luigi/souda-go-zai-que-ren" rel="nofollow noreferrer" target="_blank">資料</a></p>
+
+<p>Go の基礎的な事柄に対するお話でした。
+再確認できてよかったです。</p>
+
+<h3 id="go-合宿-by-maro-ktさん-twitter-com-maro-kt">Go 合宿 (by <a href="twitter.com/maro_kt" rel="nofollow noreferrer" target="_blank">maro_ktさん</a>)</h3>
+
+<p><a href="//go-beginners.connpass.com/event/47481/" rel="nofollow noreferrer" target="_blank">Go合宿</a>の参加報告でした。
+土善旅館はいいぞ。</p>
 
   </main>
 
