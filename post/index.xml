@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2019 Copyright warashi</copyright>
-    <lastBuildDate>Wed, 29 Nov 2017 18:57:20 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Feb 2019 14:24:46 +0900</lastBuildDate>
     
 	<atom:link href="https://warashi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitOps</title>
+      <link>https://warashi.github.io/post/2019/02/24/gitops/</link>
+      <pubDate>Sun, 24 Feb 2019 14:24:46 +0900</pubDate>
+      
+      <guid>https://warashi.github.io/post/2019/02/24/gitops/</guid>
+      <description>このブログ更新するのすごい久しぶりだ…… 🤔 GitOpsというやつを知って、やってみたいなって思ったんですね。で、GitHub Pagesって特</description>
+    </item>
     
     <item>
       <title>CircleCI 2.0</title>
