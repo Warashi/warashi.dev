@@ -1,6 +1,7 @@
 ---
 title: やる気 Not Found
 ---
+
 Warashiのやる気が続く限りやっていくウェブサイトです。更新されないのはよくあることです。
 
 [@warashi___](https://twitter.com/warashi___) でつぶやいてます。
