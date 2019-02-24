@@ -29,14 +29,14 @@ menu:
     - name: Home
       url: /
       weight: 1
+    - name: about Warashi
+      url: /about/
+      weight: 2
     - name: Blog
       url: /post/
-      weight: 2
+      weight: 3
     - name: Tags
       url: /tags/
-      weight: 3
-    - name: About
-      url: /about/
       weight: 4
     - name: RSS
       url: /index.xml
