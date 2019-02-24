@@ -6,7 +6,7 @@
     <description>Recent content in Posts on やる気 Not Found</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <copyright>© 2016 Copyright warashi</copyright>
+    <copyright>© 2019 Copyright warashi</copyright>
     <lastBuildDate>Wed, 29 Nov 2017 18:57:20 +0900</lastBuildDate>
     
 	<atom:link href="https://warashi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -14,28 +14,28 @@
     
     <item>
       <title>CircleCI 2.0</title>
-      <link>https://warashi.github.io/post/circleci-2.0/</link>
+      <link>https://warashi.github.io/2017/11/29/circleci-2.0/</link>
       <pubDate>Wed, 29 Nov 2017 18:57:20 +0900</pubDate>
       
-      <guid>https://warashi.github.io/post/circleci-2.0/</guid>
+      <guid>https://warashi.github.io/2017/11/29/circleci-2.0/</guid>
       <description>このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン</description>
     </item>
     
     <item>
       <title>「そうだ Go、京都。」参加報告</title>
-      <link>https://warashi.github.io/post/gokyoto/</link>
+      <link>https://warashi.github.io/2017/04/29/gokyoto/</link>
       <pubDate>Sat, 29 Apr 2017 20:15:58 +0900</pubDate>
       
-      <guid>https://warashi.github.io/post/gokyoto/</guid>
+      <guid>https://warashi.github.io/2017/04/29/gokyoto/</guid>
       <description>本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。 LTじゃないやつ String::Random の Go 版を作った話</description>
     </item>
     
     <item>
       <title>ブログはじめました</title>
-      <link>https://warashi.github.io/post/blog_created/</link>
+      <link>https://warashi.github.io/2017/04/22/blog_created/</link>
       <pubDate>Sat, 22 Apr 2017 09:03:51 +0900</pubDate>
       
-      <guid>https://warashi.github.io/post/blog_created/</guid>
+      <guid>https://warashi.github.io/2017/04/22/blog_created/</guid>
       <description>Hugo を使ってブログを始めました。 ブログの生成元ファイル群はここにあります。 Circle CI を使って1リポジトリの複数ブランチでソースと生成結果を管理してま</description>
     </item>
     
