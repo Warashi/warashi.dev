@@ -38,7 +38,7 @@ jobs:
           command: |
             git config --global user.email '6warashi9@gmail.com'
             git config --global user.name 'CircleCI'
-            git clone -b master 'https://github.com:Warashi/warashi.github.io' ~/repository
+            git clone -b master 'https://github.com/Warashi/warashi.github.io.git' ~/repository
             cd ~/repository
             git checkout -b update/${CIRCLE_SHA1}
             rsync -va --delete --exclude '.git' ~/public/ ~/repository/
