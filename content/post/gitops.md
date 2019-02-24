@@ -1,7 +1,7 @@
 ---
-title: "GitOps"
-date: 2019-02-24T14:24:46+09:00
+date: "2019-02-24T14:24:46+09:00"
 draft: true
+title: GitOps
 ---
 
 このブログ更新するのすごい久しぶりだ…… :thinking:
