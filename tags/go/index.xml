@@ -6,7 +6,7 @@
     <description>Recent content in Go on やる気 Not Found</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <copyright>© 2016 Copyright warashi</copyright>
+    <copyright>© 2019 Copyright warashi</copyright>
     <lastBuildDate>Sat, 29 Apr 2017 20:15:58 +0900</lastBuildDate>
     
 	<atom:link href="https://warashi.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +14,10 @@
     
     <item>
       <title>「そうだ Go、京都。」参加報告</title>
-      <link>https://warashi.github.io/post/gokyoto/</link>
+      <link>https://warashi.github.io/2017/04/29/gokyoto/</link>
       <pubDate>Sat, 29 Apr 2017 20:15:58 +0900</pubDate>
       
-      <guid>https://warashi.github.io/post/gokyoto/</guid>
+      <guid>https://warashi.github.io/2017/04/29/gokyoto/</guid>
       <description>本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。 LTじゃないやつ String::Random の Go 版を作った話</description>
     </item>
     
