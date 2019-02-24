@@ -1,2 +1,7 @@
 version: 2
-jobs: {}
+jobs:
+  noop:
+    docker:
+      - image: scratch
+    steps: []
+
