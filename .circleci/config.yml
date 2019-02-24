@@ -2,7 +2,7 @@ version: 2
 
 default: &default
   docker:
-    - image: 6warashi9/docker-alpine-hugo-git-ssh-rsync
+    - image: 6warashi9/dockerfile-for-hugo
   working_directory: ~/project
 jobs:
   build:
