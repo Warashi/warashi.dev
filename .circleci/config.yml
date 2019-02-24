@@ -1,7 +1,12 @@
 version: 2
 jobs:
-  noop:
+  build:
     docker:
-      - image: scratch
-    steps: []
+      - image: busybox
+    steps:
+      - run: echo noop
+workflows:
+  version: 2
+  jobs:
+    - build
 
