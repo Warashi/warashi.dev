@@ -2,7 +2,7 @@ baseurl: 'https://warashi.github.io/'
 theme: cupper-hugo-theme
 languageCode: ja-JP
 defaultContentLanguage: ja
-title: やる気 Not Found
+title: 404 やる気 Not Found
 copyright: © 2019 Copyright warashi
 canonifyurls: true
 enableEmoji: true

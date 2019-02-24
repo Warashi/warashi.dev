@@ -1,6 +1,6 @@
 ---
-title: やる気 Not Found
-date: 2018-01-01T00:00:00+09:00
+title: 404 やる気 Not Found
+date: 2000-01-01T00:00:00+09:00
 tags: []
 ---
 
