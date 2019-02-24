@@ -1,10 +1,9 @@
-+++
-categories = []
-date = "2017-04-22T09:03:51+09:00"
-tags = []
-title = "ブログはじめました"
-
-+++
+---
+categories: []
+date: "2017-04-22T09:03:51+09:00"
+tags: []
+title: ブログはじめました
+---
 
 [Hugo](//gohugo.io) を使ってブログを始めました。
 ブログの生成元ファイル群は[ここ](//github.com/Warashi/warashi.github.io)にあります。
