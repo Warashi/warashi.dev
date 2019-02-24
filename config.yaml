@@ -16,7 +16,7 @@ taxonomies:
   tag: tags
 
 permalinks:
-  post: /:year/:month/:day/:filename/
+  post: /post/:year/:month/:day/:filename/
 
 imaging:
   quality: 99
