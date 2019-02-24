@@ -7,6 +7,7 @@ jobs:
       - run: echo noop
 workflows:
   version: 2
-  jobs:
-    - build
+  noop:
+    jobs:
+      - build
 
