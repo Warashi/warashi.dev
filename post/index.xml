@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2019 Copyright warashi</copyright>
-    <lastBuildDate>Sun, 24 Feb 2019 14:24:46 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 21:03:15 +0900</lastBuildDate>
     
 	<atom:link href="https://warashi.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>warashi.dev</title>
+      <link>https://warashi.dev/post/2019/03/01/warashi.dev/</link>
+      <pubDate>Fri, 01 Mar 2019 21:03:15 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2019/03/01/warashi.dev/</guid>
+      <description>なんとなく .dev. ドメインが話題になっていたので、独自ドメインを取得しました。 warashi.dev です。このサイトも https://warashi.dev になりました。 Google Domains で取得したんですが、Gith</description>
+    </item>
     
     <item>
       <title>GitOps</title>
