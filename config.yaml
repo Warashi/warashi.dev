@@ -1,4 +1,4 @@
-baseurl: 'https://warashi.github.io/'
+baseurl: 'https://warashi.dev/'
 theme: cupper-hugo-theme
 languageCode: ja-JP
 defaultContentLanguage: ja
