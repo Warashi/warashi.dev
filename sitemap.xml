@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</loc>
+    <lastmod>2019-03-16T11:33:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://warashi.dev/post/2019/03/01/warashi.dev/</loc>
     <lastmod>2019-03-01T21:03:15+09:00</lastmod>
   </url>
@@ -45,7 +50,7 @@
   
   <url>
     <loc>https://warashi.dev/post/</loc>
-    <lastmod>2019-03-01T21:03:15+09:00</lastmod>
+    <lastmod>2019-03-16T11:33:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   

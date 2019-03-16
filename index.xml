@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Signed HTTP Exchanges (SXG) と Accelerated Mobile Pages (AMP)</title>
+      <link>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</link>
+      <pubDate>Sat, 16 Mar 2019 11:33:29 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</guid>
+      <description>まだDraftなんですが、 Signed HTTP Exchanges という規格があります。 規格そのものについて詳しくはJxckさんのブログ記事 WebPackaging の Signed HTTP Exchanges を参照してもらえるといい</description>
+    </item>
+    
+    <item>
       <title>warashi.dev</title>
       <link>https://warashi.dev/post/2019/03/01/warashi.dev/</link>
       <pubDate>Fri, 01 Mar 2019 21:03:15 +0900</pubDate>
