@@ -14,3 +14,4 @@ workflows:
             branches:
               ignore:
                 - master
+                - /^update\/.*/
