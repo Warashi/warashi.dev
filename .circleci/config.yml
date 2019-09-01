@@ -9,8 +9,5 @@ workflows:
   version: 2
   noop:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - master
+      - build
+
