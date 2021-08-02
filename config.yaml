@@ -7,10 +7,10 @@ copyright: © 2019 Copyright warashi
 canonifyurls: true
 enableEmoji: true
 hasCJKLanguage: true
-blackfriday:
-  hrefTargetBlank: true
-  nofollowLinks: true
-  noreferrerLinks: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 taxonomies:
   tag: tags
