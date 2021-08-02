@@ -1,5 +1,5 @@
 baseurl: 'https://warashi.dev/'
-theme: cupper-hugo-theme
+theme: m10c
 languageCode: ja-JP
 defaultContentLanguage: ja
 title: 404 やる気 Not Found
@@ -24,10 +24,20 @@ imaging:
   quality: 99
 
 params:
-  dateFormat: '2006/01/02'
+  author: ざしきわらし
+  avatar: images/tisza.png
+  description: ざしきわらしがいろいろ書いている場所です
+  menu_item_separator: '<br />'
+  social:
+    - icon: github
+      name: Warashi
+      url: https://github.com/Warashi
+    - icon: twitter
+      name: '@warashi___'
+      url: https://twitter.com/warashi___
 
 menu:
-  nav:
+  main:
     - name: Home
       url: /
       weight: 1
