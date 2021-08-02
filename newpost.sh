@@ -1,5 +1,5 @@
-#!/bin/sh
-set -eo pipefail
+#!/bin/bash
+set -euo pipefail
 title="${1}"
 if [ -z "${title}" ]; then
 	echo "Usage: ${0} 'title'"
@@ -8,7 +8,6 @@ fi
 
 path="post/$(date -j '+%Y/%m/%d')/${title}.md"
 git fetch origin -p
-git checkout origin/source
-git checkout -b feature/${title}
-hugo new ${path}
-open content/${path}
+git switch -c "feature/${title}" origin/main
+hugo new "${path}"
+open "content/${path}"
