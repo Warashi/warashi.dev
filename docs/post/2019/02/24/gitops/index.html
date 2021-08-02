@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.58.2" />
+  <meta name="generator" content="Hugo 0.78.2" />
   <link rel="canonical" href="https://warashi.dev/post/2019/02/24/gitops/">
 
   
@@ -246,14 +246,10 @@
     
 
     <p>このブログ更新するのすごい久しぶりだ…… 🤔</p>
-
 <p>GitOpsというやつを知って、やってみたいなって思ったんですね。で、GitHub Pagesって特定のbranchの中身が常に反映されるわけじゃないですか。これはGitOpsにぴったりなのでは！と思ってこのブログをGitOpsっぽくしました。</p>
-
 <p>具体的には、記事を書く際には <code>source</code> branch に向けてPRを作ります。この時点ではまだmarkdownファイルとかで書かれています。このPRがマージされると、CircleCI上でHugoを動かして <code>master</code> branchに向けたPRを自動で作ります。このPRにはHTMLファイルなどのHugoの成果物が入っています。</p>
-
 <p>で、最終確認をした後にこのPRをマージするとGitHub Pagesに反映されるってわけです。2回PRをマージしないといけないですけど、実際に出力されるHTMLの差分を確認してから反映することで何かうれしいことがあるかもしれない？ないかもしれないけど。
 ないかもしれないって思ったんだけど、テーマ変えたりしてリニューアル作業をしていたらちょっとしたことでHugoの成果物が壊れてしまって、それを公開する前に気づけたのでやっぱりこの方式は有用だってことを確認できた。</p>
-
 <p>上にも書いたけど、久しぶりに更新するついでにHugoのテーマも変えときました。</p>
 
   </main>
