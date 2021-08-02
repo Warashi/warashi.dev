@@ -1,65 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://warashi.dev/post/</loc>
     <lastmod>2019-03-16T11:33:29+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</loc>
     <lastmod>2019-03-16T11:33:29+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2019/03/01/warashi.dev/</loc>
     <lastmod>2019-03-01T21:03:15+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2019/02/24/gitops/</loc>
     <lastmod>2019-02-24T14:24:46+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2017/11/29/circleci-2.0/</loc>
     <lastmod>2017-11-29T18:57:20+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/tags/go/</loc>
     <lastmod>2017-04-29T20:15:58+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/tags/</loc>
     <lastmod>2017-04-29T20:15:58+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2017/04/29/gokyoto/</loc>
     <lastmod>2017-04-29T20:15:58+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
     <lastmod>2017-04-29T20:15:58+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/post/2017/04/22/blog_created/</loc>
     <lastmod>2017-04-22T09:03:51+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/</loc>
     <lastmod>2000-01-01T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://warashi.dev/about/</loc>
     <lastmod>2000-01-01T00:00:00+09:00</lastmod>
   </url>
-  
 </urlset>

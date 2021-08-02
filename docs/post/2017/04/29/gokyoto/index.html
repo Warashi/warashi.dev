@@ -5,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <link rel="canonical" href="https://warashi.dev/post/2017/04/29/gokyoto/">
 
   
+    
+    <meta name="description" content="本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。 LTじゃないやつ String::Random の Go 版を作った話">
+  
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://warashi.dev/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://warashi.dev/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://warashi.dev/favicon-16x16.png">
-  <link rel="manifest" href="https://warashi.dev/site.webmanifest">
-  <link rel="mask-icon" href="https://warashi.dev/safari-pinned-tab.svg" color="#000000">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://warashi.dev/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="https://warashi.dev/favicon-16x16.png"> 
+  <link rel="manifest" href="https://warashi.dev/site.webmanifest"> 
+  <link rel="mask-icon" href="https://warashi.dev/safari-pinned-tab.svg" color="#000000"> 
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
 
   <link rel="stylesheet" href="https://warashi.dev/css/prism.css" media="none" onload="this.media='all';">
 
@@ -24,11 +34,7 @@
   
   <link rel="stylesheet" type="text/css" href="https://warashi.dev/css/styles.css">
 
-  <style id="inverter" media="none">
-    html { filter: invert(100%) }
-    * { background-color: inherit }
-    img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
-  </style>
+  
 
   
   
@@ -36,7 +42,16 @@
 </head>
 
   <body>
-    <a href="#main">skip to content</a>
+    <a href="#main"></a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -130,20 +145,26 @@
       <header class="intro-and-nav" role="banner">
   <div>
     <div class="intro">
-      <a class="logo" href="https://warashi.dev/" aria-label="404 やる気 Not Found home page">
-        <img src="https://warashi.dev/images/logo.svg" alt="">
+      <a
+        class="logo"
+        href="https://warashi.dev/"
+        aria-label="404 やる気 Not Found home page"
+      >
+        <img 
+          src="https://warashi.dev/images/logo.svg" 
+          alt="Logo">
       </a>
       <p class="library-desc">
         
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
-  <h2 class="vh">Main navigation</h2>
+  <h2 class="vh"></h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
       <use xlink:href="#menu"></use>
     </svg>
-    Menu
+    
   </button>
   
   <ul id="patterns-list">
@@ -215,8 +236,10 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
@@ -231,7 +254,7 @@
     <div class="date">
       
       
-      <strong aria-hidden="true">Publish date: </strong>2017/04/29
+      <strong> </strong>2017/04/29
       
         
       
@@ -239,8 +262,8 @@
 
     
       <div class="tags">
-        <strong aria-hidden="true">Tags: </strong>
-        <ul aria-label="tags">
+        <strong> </strong>
+        <ul aria-label="">
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
@@ -266,7 +289,7 @@
       
 
   <nav class="toc" aria-labelledby="toc-heading">
-    <h2 id="toc-heading">Table of contents</h2>
+    <h2 id="toc-heading"></h2>
     <ol>
       
         <li>
@@ -375,21 +398,33 @@ csvっぽい形式を読み込んだりすることはあったんですが、 e
 </div>
 
 
-          <footer role="contentinfo">
-  <div>
+          
+            <footer role="contentinfo">
+  <div
+  
+  >
     <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
+       <input type="checkbox" id="themer" class="vh">
+      
       <span aria-hidden="true"></span>
     </label>
   </div>
   
 </footer>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://warashi.dev/js/prism.js"></script>
-<script src="https://warashi.dev/js/dom-scripts.js"></script>
+    
+
+<script src="https://warashi.dev/js/dom-scripts.js"></script>  
+
+<script src="https://warashi.dev/js/prism.js"></script>
+
+
+
+
 
     
     
