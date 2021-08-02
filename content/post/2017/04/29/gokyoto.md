@@ -12,7 +12,7 @@ title: 「そうだ Go、京都。」参加報告
 ## LTじゃないやつ
 
 ### String::Random の Go 版を作った話 (by [tさん](//twitter.com/t_snzk))
-[ご本人の解説記事](http://blog.yux3.net/entry/2017/05/01/014200)
+[ご本人の解説記事](//blog.yux3.net/entry/2017/05/01/014200)
 
 [String::Random](//metacpan.org/pod/String::Random) という Perl のモジュールがあって、それを Go に移植したという話でした。
 実装はこちら ([gocha](//github.com/t-mrt/gocha))
@@ -79,7 +79,7 @@ csvっぽい形式を読み込んだりすることはあったんですが、 e
 東京から来ててすごいなって思ったら天皇賞のついでらしかった。
 ポーリング撲滅のためにミドルウェアを作ったって話でした。
 作ったとはいうものの、実装は[インターン生](//twitter.com/upamune)がほぼ一人でやったとのこと。すごい。
-インターン生の書いたブログ記事は[これ](http://blog.upamune.com/entry/2017/04/07/165658)っぽい。
+インターン生の書いたブログ記事は[これ](//upamune.hatenablog.com/entry/2017/04/07/165658)っぽい。
 
 ### パッケージの公開方法 (by [kwmt27さん](//twitter.com/kwmt27))
 [資料](//go-talks.appspot.com/github.com/kwmt/go-talks/2017/souda-kyoto-go.slide)
@@ -93,6 +93,6 @@ csvっぽい形式を読み込んだりすることはあったんですが、 e
 Go の基礎的な事柄に対するお話でした。
 再確認できてよかったです。
 
-### Go 合宿 (by [maro_ktさん](twitter.com/maro_kt))
+### Go 合宿 (by [maro_ktさん](//twitter.com/maro_kt))
 [Go合宿](//go-beginners.connpass.com/event/47481/)の参加報告でした。
 土善旅館はいいぞ。
