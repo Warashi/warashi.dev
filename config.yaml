@@ -12,7 +12,7 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: github
+    style: dracula
 
 taxonomies:
   tag: tags
