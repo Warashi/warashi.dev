@@ -19,7 +19,7 @@ jobs:
         with:
           hugo-version: '0.78.2'
       - name: Build
-        run: hugo --minify --destination "${DESTINATION}"
+        run: hugo --destination "${DESTINATION}"
         env:
           DESTINATION: ${{ github.workspace }}/docs
       - name: Create Pull Request
