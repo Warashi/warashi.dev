@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.58.2" />
+  <meta name="generator" content="Hugo 0.78.2" />
   <link rel="canonical" href="https://warashi.dev/post/2017/11/29/circleci-2.0/">
 
   
@@ -247,16 +247,12 @@
 
     <p>このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
 移行のためにDockerコンテナを作るところから始める、というちょっと面倒な事態になりましたが、なんとか移行完了したのでちょっと記事書くかなって感じです。</p>
-
 <p>まず先にこのブログのリポジトリ構成をちょっと書いておくと、sourceブランチにHugoに渡すMarkdownとかがあって、masterブランチには生成されたHTMLとかがある、という構成になってます。
 つまり、sourceブランチを取ってきて、Hugoを走らせて、結果public以下にできるファイル群をmasterブランチにpushすればいいことになります。</p>
-
-<p>これをするために作ったDockerコンテナのGitHubリポジトリが<a href="https://github.com/Warashi/docker-alpine-hugo-git-ssh-rsync" rel="nofollow noreferrer" target="_blank">こちら</a>。
+<p>これをするために作ったDockerコンテナのGitHubリポジトリが<a href="https://github.com/Warashi/docker-alpine-hugo-git-ssh-rsync">こちら</a>。
 とりあえずalpineで、なんとなく使いそうだったコマンドを入れてある感じになります。</p>
-
-<p>そして、CircleCIの設定ファイルが<a href="https://github.com/Warashi/warashi.github.io/blob/source/.circleci/config.yml" rel="nofollow noreferrer" target="_blank">こちら</a>。
+<p>そして、CircleCIの設定ファイルが<a href="https://github.com/Warashi/warashi.github.io/blob/source/.circleci/config.yml">こちら</a>。
 これを参考にしてもらえば、このブログと同じことができるはずになってます。</p>
-
 <p>誰かの助けになれば幸いです。</p>
 
   </main>
