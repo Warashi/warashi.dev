@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.58.2" />
+  <meta name="generator" content="Hugo 0.78.2" />
   <link rel="canonical" href="https://warashi.dev/post/2019/03/16/sxg_and_amppackager/">
 
   
@@ -246,59 +246,47 @@
     
 
     <p>まだDraftなんですが、 Signed HTTP Exchanges という規格があります。
-規格そのものについて詳しくはJxckさんのブログ記事 <a href="https://blog.jxck.io/entries/2018-12-01/signed-http-exchanges.html" rel="nofollow noreferrer" target="_blank">WebPackaging の Signed HTTP Exchanges</a> を参照してもらえるといいと思います。</p>
-
+規格そのものについて詳しくはJxckさんのブログ記事 <a href="https://blog.jxck.io/entries/2018-12-01/signed-http-exchanges.html">WebPackaging の Signed HTTP Exchanges</a> を参照してもらえるといいと思います。</p>
 <p>この応用先として、Accelerated Mobile Pages (AMP)を表示する際にオリジナルのURLで表示するというものがあります。SXGを使わない（この記事執筆時点での一般的な状態）のAMPはGoogleだったりAMPProjectのドメインで配信されているはずです。これを、SXGをうまく使ってやることで配信はGoogleなどのAMPキャッシュから行うが、ブラウザのURLバーに表示するのはオリジナルのURLにするということが実現できます。</p>
-
-<p>これを実現するためには、Google Botがクロールしに来た時にSXGがあるということを伝えてやったり、実際にSXGを生成して返してやる必要があります。そのための<a href="https://github.com/ampproject/amppackager" rel="nofollow noreferrer" target="_blank"><strong>AMP Packager</strong>というツール</a>がAMP Projectによって公開されています。</p>
-
+<p>これを実現するためには、Google Botがクロールしに来た時にSXGがあるということを伝えてやったり、実際にSXGを生成して返してやる必要があります。そのための<a href="https://github.com/ampproject/amppackager"><strong>AMP Packager</strong>というツール</a>がAMP Projectによって公開されています。</p>
 <p>今回、origin、AMP Packagerと、必要に応じてAMP Packagerにアクセスを向けるReverse Proxyの3つをdocker-composeでローカルで動かして動作確認するということをやったのでそれについて解説したいと思います。</p>
-
 <p>AMP PackagerのREADMEにも書いてありますが、Reverse Proxyでの処理は下記のようになります。</p>
-
 <ol>
 <li><code>/amppkg/</code> 以下はそのままAMP Packagerに向ける</li>
 <li>リクエストに <code>AMP-Cache-Transform</code> ヘッダがある場合は <code>/priv/doc/$scheme://$server_name$request_uri</code> にrewriteしてAMP Packagerに向ける
-
 <ul>
 <li><code>/priv/doc/</code> 以下に直接アクセスがあった場合にはAMP Packagerに向け<strong>ない</strong></li>
-</ul></li>
+</ul>
+</li>
 <li>その他のリクエストはそのままOriginに向ける</li>
 </ol>
-
 <p>また、その他の注意点として、AMPページに対する最終的なレスポンスの <code>Vary</code> ヘッダーに <code>AMP-Cache-Transform</code> と <code>Accept</code> を入れてやる必要があります。</p>
-
 <p>それ以外に今回はまったポイントがあるんですが、それはオレオレ証明書を使っていることが原因でした。
 具体的には</p>
-
 <ol>
 <li>AMP Packagerが使う証明書にはOCSP Serverの情報がないこと。</li>
 <li>AMP PackagerからOriginへのfetchがHTTPSで行われる際の証明書エラーが起きる。</li>
 <li>Chromeに起動オプションを渡してやらないと証明書エラーが起きる。</li>
 </ol>
-
 <p>それぞれ、下記で解決できました。</p>
-
 <ol>
-<li><p>amppkgコマンドを実行する前にopensslコマンドでocsp responseを生成してやる。このときopensslコマンドの出力先に、amppkg.tomlで指定したOCSP Cacheのパスを指定する。コマンドは下記。</p>
-
-<pre><code class="language-bash">touch index.txt index.txt.attr
-openssl ocsp -noverify -index ./index.txt -rsigner ca.ocsp.cert -rkey ca.privkey -CA ca.cert -ndays 7 -issuer ca.cert -cert server.cert -respout /tmp/amppkg-ocsp
-</code></pre></li>
-
-<li><p>オレオレ認証局の証明書をあらかじめシステムに登録してやる。</p></li>
-
-<li><p>Chromeの起動オプション <code>--ignore-certificate-errors-spki-list</code> にカンマ区切りで証明書の情報を渡してやる。</p>
-
+<li>
+<p>amppkgコマンドを実行する前にopensslコマンドでocsp responseを生成してやる。このときopensslコマンドの出力先に、amppkg.tomlで指定したOCSP Cacheのパスを指定する。コマンドは下記。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch index.txt index.txt.attr
+openssl ocsp -noverify -index ./index.txt -rsigner ca.ocsp.cert -rkey ca.privkey -CA ca.cert -ndays <span style="color:#ae81ff">7</span> -issuer ca.cert -cert server.cert -respout /tmp/amppkg-ocsp
+</code></pre></div></li>
+<li>
+<p>オレオレ認証局の証明書をあらかじめシステムに登録してやる。</p>
+</li>
+<li>
+<p>Chromeの起動オプション <code>--ignore-certificate-errors-spki-list</code> にカンマ区切りで証明書の情報を渡してやる。</p>
 <ul>
-<li><p>渡す情報は各証明書（<code>server.cert</code>）に対して下記コマンドで取得できる。渡す必要があるのは、TLSに使う証明書とSXGに使う証明書の2つ。</p>
-
-<pre><code class="language-bash">cat server.cert | openssl x509 -pubkey | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64
-</code></pre></li>
-</ul></li>
+<li>渡す情報は各証明書（<code>server.cert</code>）に対して下記コマンドで取得できる。渡す必要があるのは、TLSに使う証明書とSXGに使う証明書の2つ。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat server.cert | openssl x509 -pubkey | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64
+</code></pre></div></li>
 </ol>
-
-<p>使ったコードは <a href="https://github.com/Warashi/try-amppackager" rel="nofollow noreferrer" target="_blank">https://github.com/Warashi/try-amppackager</a> で公開していますのでぜひ参考にしてください。</p>
+<p>使ったコードは <a href="https://github.com/Warashi/try-amppackager">https://github.com/Warashi/try-amppackager</a> で公開していますのでぜひ参考にしてください。</p>
 
   </main>
   <div id="disqus-container">

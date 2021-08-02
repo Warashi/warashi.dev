@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>404 やる気 Not Found</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2019 Copyright warashi</copyright>
-    <lastBuildDate>Sat, 01 Jan 2000 00:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://warashi.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Jan 2000 00:00:00 +0900</lastBuildDate><atom:link href="https://warashi.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Signed HTTP Exchanges (SXG) と Accelerated Mobile Pages (AMP)</title>
       <link>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</link>
