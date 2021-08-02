@@ -2,17 +2,29 @@ name: "Build and PR"
 on:
   push:
     branches:
-      - source
+      - main
+
 jobs:
   build_and_pr:
     name: "Build and make PR"
     runs-on: ubuntu-latest
     steps:
       - name: "checkout"
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           submodules: true
-      - name: "Build and make PR"
-        uses: Warashi/warashi.github.io@action
+          fetch-depth: 0
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.78.2'
+      - name: Build
+        run: hugo --minify --destination "${DESTINATION}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DESTINATION: ${{ github.workspace }}/docs
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3.10.0
+        with:
+          delete-branch: true
+          branch-suffix: short-commit-hash
+          reviewers: ${{ github.actor }}
