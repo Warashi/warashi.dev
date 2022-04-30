@@ -90,25 +90,25 @@
 <h1 id="slices-use-less-instead-of-greaterorequalhttpsgithubcomgolanggocommit415e3fd8a6e62d7e9cf7d0c995518179dc0b7723"><a href="https://github.com/golang/go/commit/415e3fd8a6e62d7e9cf7d0c995518179dc0b7723">slices: use !{{Less}} instead of {{GreaterOrEqual}}</a></h1>
 <p>sortで <code>a</code> と <code>b</code> を比較する際に <code>a &gt;= b</code> を使うか <code>!(a &lt; b)</code> を使うかによって結果が変わってしまうから元に戻すよ、ということのようです。
 この2つは一見同じように見えるのですが、浮動小数点数で <code>NaN</code> が混じっているときに同じ結果ではなくなります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff79c6">package</span> main
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#719e07">package</span> main
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> (
-</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#2aa198">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#2aa198">&#34;math&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;golang.org/x/exp/constraints&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#2aa198">&#34;golang.org/x/exp/constraints&#34;</span>
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> compare[T constraints.Ordered](a, b T) <span style="color:#8be9fd">bool</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">return</span> !(a &lt; b) <span style="color:#ff79c6">==</span> (a <span style="color:#ff79c6">&gt;=</span> b)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> compare[T constraints.Ordered](a, b T) <span style="color:#dc322f">bool</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#719e07">return</span> !(a &lt; b) <span style="color:#719e07">==</span> (a <span style="color:#719e07">&gt;=</span> b)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
-</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;1 and 2:&#34;</span>, <span style="color:#50fa7b">compare</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>))
-</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Inf and 0:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>), <span style="color:#bd93f9">0</span>))
-</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Inf and Inf:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>), math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>)))
-</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;NaN and 1:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">NaN</span>(), <span style="color:#bd93f9">1</span>))
-</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;NaN and NaN:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">NaN</span>(), math.<span style="color:#50fa7b">NaN</span>()))
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;1 and 2:&#34;</span>, <span style="color:#268bd2">compare</span>(<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Inf and 0:&#34;</span>, <span style="color:#268bd2">compare</span>(math.<span style="color:#268bd2">Inf</span>(<span style="color:#2aa198">1</span>), <span style="color:#2aa198">0</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Inf and Inf:&#34;</span>, <span style="color:#268bd2">compare</span>(math.<span style="color:#268bd2">Inf</span>(<span style="color:#2aa198">1</span>), math.<span style="color:#268bd2">Inf</span>(<span style="color:#2aa198">1</span>)))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;NaN and 1:&#34;</span>, <span style="color:#268bd2">compare</span>(math.<span style="color:#268bd2">NaN</span>(), <span style="color:#2aa198">1</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;NaN and NaN:&#34;</span>, <span style="color:#268bd2">compare</span>(math.<span style="color:#268bd2">NaN</span>(), math.<span style="color:#268bd2">NaN</span>()))
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Playground: <a href="https://go.dev/play/p/iAMjcAgU8pz">https://go.dev/play/p/iAMjcAgU8pz</a></p>
 <h1 id="time-document-hhmmss-formatshttpsgithubcomgolanggocommit24b570354caee33d4fb3934ce7ef1cc97fb403fd"><a href="https://github.com/golang/go/commit/24b570354caee33d4fb3934ce7ef1cc97fb403fd">time: document hhmmss formats</a></h1>

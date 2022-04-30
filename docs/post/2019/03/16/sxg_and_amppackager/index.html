@@ -113,8 +113,8 @@
 <ol>
 <li>
 <p>amppkgコマンドを実行する前にopensslコマンドでocsp responseを生成してやる。このときopensslコマンドの出力先に、amppkg.tomlで指定したOCSP Cacheのパスを指定する。コマンドは下記。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch index.txt index.txt.attr
-</span></span><span style="display:flex;"><span>openssl ocsp -noverify -index ./index.txt -rsigner ca.ocsp.cert -rkey ca.privkey -CA ca.cert -ndays <span style="color:#bd93f9">7</span> -issuer ca.cert -cert server.cert -respout /tmp/amppkg-ocsp
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch index.txt index.txt.attr
+</span></span><span style="display:flex;"><span>openssl ocsp -noverify -index ./index.txt -rsigner ca.ocsp.cert -rkey ca.privkey -CA ca.cert -ndays <span style="color:#2aa198">7</span> -issuer ca.cert -cert server.cert -respout /tmp/amppkg-ocsp
 </span></span></code></pre></div></li>
 <li>
 <p>オレオレ認証局の証明書をあらかじめシステムに登録してやる。</p>
@@ -124,7 +124,7 @@
 <ul>
 <li>渡す情報は各証明書（<code>server.cert</code>）に対して下記コマンドで取得できる。渡す必要があるのは、TLSに使う証明書とSXGに使う証明書の2つ。</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat server.cert | openssl x509 -pubkey | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat server.cert | openssl x509 -pubkey | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64
 </span></span></code></pre></div></li>
 </ol>
 <p>使ったコードは <a href="https://github.com/Warashi/try-amppackager">https://github.com/Warashi/try-amppackager</a> で公開していますのでぜひ参考にしてください。</p>
