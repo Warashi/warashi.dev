@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja-JP">
+  <head>
+    <title>Go Commits in this Week at 2022-04-30 // 404 やる気 Not Found</title>
+    <link rel="shortcut icon" href="https://warashi.dev/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.98.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ざしきわらし" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://warashi.dev/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Go Commits in this Week at 2022-04-30"/>
+<meta name="twitter:description" content="https://github.com/golang/go に今週あったコミットのうち、僕の目にとまったもをの書いていきます。 slices: use !{{Less}} instead of {{GreaterOrEqual}} sortで a と b を比較する際に a &gt;= b を使うか !(a &lt; b) を使うかに"/>
+
+    <meta property="og:title" content="Go Commits in this Week at 2022-04-30" />
+<meta property="og:description" content="https://github.com/golang/go に今週あったコミットのうち、僕の目にとまったもをの書いていきます。 slices: use !{{Less}} instead of {{GreaterOrEqual}} sortで a と b を比較する際に a &gt;= b を使うか !(a &lt; b) を使うかに" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://warashi.dev/post/2022/04/30/go-commits-in-this-week/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-30T11:43:23+09:00" />
+<meta property="article:modified_time" content="2022-04-30T11:43:23+09:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://warashi.dev/"><img class="app-header-avatar" src="https://warashi.dev/images/tisza.png" alt="ざしきわらし" /></a>
+      <h1>404 やる気 Not Found</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="https://warashi.dev/">Home</a>
+            <br />
+          
+          <a class="app-header-menu-item" href="https://warashi.dev/about/">about Warashi</a>
+            <br />
+          
+          <a class="app-header-menu-item" href="https://warashi.dev/post/">Blog</a>
+            <br />
+          
+          <a class="app-header-menu-item" href="https://warashi.dev/tags/">Tags</a>
+            <br />
+          
+          <a class="app-header-menu-item" href="https://warashi.dev/index.xml">RSS</a>
+      </nav>
+      <p>ざしきわらしがいろいろ書いている場所です</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/Warashi" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Warashi</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com/warashi___" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>@warashi___</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Go Commits in this Week at 2022-04-30</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Apr 30, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><a href="https://github.com/golang/go">https://github.com/golang/go</a> に今週あったコミットのうち、僕の目にとまったもをの書いていきます。</p>
+<h1 id="slices-use-less-instead-of-greaterorequalhttpsgithubcomgolanggocommit415e3fd8a6e62d7e9cf7d0c995518179dc0b7723"><a href="https://github.com/golang/go/commit/415e3fd8a6e62d7e9cf7d0c995518179dc0b7723">slices: use !{{Less}} instead of {{GreaterOrEqual}}</a></h1>
+<p>sortで <code>a</code> と <code>b</code> を比較する際に <code>a &gt;= b</code> を使うか <code>!(a &lt; b)</code> を使うかによって結果が変わってしまうから元に戻すよ、ということのようです。
+この2つは一見同じように見えるのですが、浮動小数点数で <code>NaN</code> が混じっているときに同じ結果ではなくなります。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff79c6">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f1fa8c">&#34;golang.org/x/exp/constraints&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> compare[T constraints.Ordered](a, b T) <span style="color:#8be9fd">bool</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">return</span> !(a &lt; b) <span style="color:#ff79c6">==</span> (a <span style="color:#ff79c6">&gt;=</span> b)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;1 and 2:&#34;</span>, <span style="color:#50fa7b">compare</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Inf and 0:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>), <span style="color:#bd93f9">0</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Inf and Inf:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>), math.<span style="color:#50fa7b">Inf</span>(<span style="color:#bd93f9">1</span>)))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;NaN and 1:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">NaN</span>(), <span style="color:#bd93f9">1</span>))
+</span></span><span style="display:flex;"><span>	fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;NaN and NaN:&#34;</span>, <span style="color:#50fa7b">compare</span>(math.<span style="color:#50fa7b">NaN</span>(), math.<span style="color:#50fa7b">NaN</span>()))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Playground: <a href="https://go.dev/play/p/iAMjcAgU8pz">https://go.dev/play/p/iAMjcAgU8pz</a></p>
+<h1 id="time-document-hhmmss-formatshttpsgithubcomgolanggocommit24b570354caee33d4fb3934ce7ef1cc97fb403fd"><a href="https://github.com/golang/go/commit/24b570354caee33d4fb3934ce7ef1cc97fb403fd">time: document hhmmss formats</a></h1>
+<p><code>(time.Time).Format</code> のフォーマット指定文字列、時差の部分について、もともと秒単位まで指定が可能だったにもかかわらずドキュメントに示されていなかったようです。
+とはいえ秒単位で時差のある地域はないはずなので、これを使う機会はくるのか…… 🤔 という感じではありますが。</p>
+<h1 id="cryptotls-remove-tls10default-godebug-flaghttpsgithubcomgolanggocommitf0ee7fda636408b4f04ca3f3b11788f662c90610"><a href="https://github.com/golang/go/commit/f0ee7fda636408b4f04ca3f3b11788f662c90610">crypto/tls: remove tls10default GODEBUG flag</a></h1>
+<p><code>GODEBUG</code> 環境変数で TLS 1.0 を有効にする指定があったのですが、それが無効になったようです。
+コード中でconfigから有効にする手段はのこっていますが、TLS 1.0は今となっては古くて脆弱……？ですし1.0を使うのはもうやめにしたいですね。</p>
+<h1 id="osexec-return-error-when-path-lookup-would-use-current-directoryhttpsgithubcomgolanggocommit3ce203db80cd1f320f0c597123b918c3b3bb0449"><a href="https://github.com/golang/go/commit/3ce203db80cd1f320f0c597123b918c3b3bb0449">os/exec: return error when PATH lookup would use current directory</a></h1>
+<p><code>golang.org/x/sys/execabs</code> と同様に、os/execで実行しようとしたコマンドがカレントディレクトリの実行ファイルだった場合にエラーを返すようになったようです。
+もともとWindowsでのみの挙動（のはず）ですが、それがUnix環境と同様になった感じですかね。
+おそらく、こちらでGit LFSの脆弱性としてあげられていたことに対する対処だと思われます。
+ref; <a href="https://forest.watch.impress.co.jp/docs/news/1404405.html">「Git for Windows」v2.36.0が公開 ～「Git LFS」の脆弱性に対処</a></p>
+<h2 id="revert-osexec-return-error-when-path-lookup-would-use-current-directoryhttpsgithubcomgolanggocommitf2b674756b3b684118e4245627d4ed8c07e518e7"><a href="https://github.com/golang/go/commit/f2b674756b3b684118e4245627d4ed8c07e518e7">Revert &ldquo;os/exec: return error when PATH lookup would use current directory&rdquo;</a></h2>
+<p>と思ったらrevertされてました。どうも <code>x/sys/execabs</code> のテストを壊してしまったようです。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
