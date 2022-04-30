@@ -12,7 +12,7 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: dracula
+    style: solarized-dark
 
 taxonomies:
   tag: tags
