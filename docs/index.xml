@@ -9,6 +9,15 @@
     <copyright>© 2019 Copyright warashi</copyright>
     <lastBuildDate>Sat, 01 Jan 2000 00:00:00 +0900</lastBuildDate><atom:link href="https://warashi.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Go Commits in this Week at 2022-04-30</title>
+      <link>https://warashi.dev/post/2022/04/30/go-commits-in-this-week/</link>
+      <pubDate>Sat, 30 Apr 2022 11:43:23 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2022/04/30/go-commits-in-this-week/</guid>
+      <description>https://github.com/golang/go に今週あったコミットのうち、僕の目にとまったもをの書いていきます。 slices: use !{{Less}} instead of {{GreaterOrEqual}} sortで a と b を比較する際に a &amp;gt;= b を使うか !(a &amp;lt; b) を使うかに</description>
+    </item>
+    
+    <item>
       <title>Signed HTTP Exchanges (SXG) と Accelerated Mobile Pages (AMP)</title>
       <link>https://warashi.dev/post/2019/03/16/sxg_and_amppackager/</link>
       <pubDate>Sat, 16 Mar 2019 11:33:29 +0900</pubDate>
