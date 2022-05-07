@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2019 Copyright warashi</copyright>
-    <lastBuildDate>Sat, 29 Apr 2017 20:15:58 +0900</lastBuildDate><atom:link href="https://warashi.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 08:10:50 +0900</lastBuildDate><atom:link href="https://warashi.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Commits in This Week at 2022-05-07</title>
+      <link>https://warashi.dev/post/2022/05/07/go-commits-in-this-week/</link>
+      <pubDate>Sat, 07 May 2022 08:10:50 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2022/05/07/go-commits-in-this-week/</guid>
+      <description>https://github.com/golang/go に今週あったコミットのうち、僕の目にとまったもをの書いていきます。 os/exec: return error when PATH lookup would use current directory · golang/go@349cc83 · GitHub 先週リバートされていたもののリトライのようで</description>
+    </item>
+    
+    <item>
+      <title>Go Commits in this Week at 2022-04-30</title>
+      <link>https://warashi.dev/post/2022/04/30/go-commits-in-this-week/</link>
+      <pubDate>Sat, 30 Apr 2022 11:43:23 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2022/04/30/go-commits-in-this-week/</guid>
+      <description>https://github.com/golang/go に今週あったコミットのうち、僕の目にとまったもをの書いていきます。 slices: use !{{Less}} instead of {{GreaterOrEqual}} sortで a と b を比較する際に a &amp;gt;= b を使うか !(a &amp;lt; b) を使うかに</description>
+    </item>
+    
     <item>
       <title>「そうだ Go、京都。」参加報告</title>
       <link>https://warashi.dev/post/2017/04/29/gokyoto/</link>
