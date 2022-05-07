@@ -1,6 +1,7 @@
 ---
 title: "Go Commits in this Week at 2022-04-30"
 date: 2022-04-30T11:43:23+09:00
+tags: [Go]
 draft: false
 ---
 <https://github.com/golang/go> に今週あったコミットのうち、僕の目にとまったもをの書いていきます。
