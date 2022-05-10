@@ -1,5 +1,7 @@
+/.direnv
 /public
 /resources/_gen/
+
 ### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/macOS.gitignore
 
 # General
@@ -162,5 +164,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
 
