@@ -9,6 +9,15 @@
     <copyright>© 2019 Copyright warashi</copyright>
     <lastBuildDate>Sat, 01 Jan 2000 00:00:00 +0900</lastBuildDate><atom:link href="https://warashi.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Go Commits in This Week at 2022-05-14</title>
+      <link>https://warashi.dev/post/2022/05/14/go-commits-in-this-week/</link>
+      <pubDate>Sat, 14 May 2022 10:45:03 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2022/05/14/go-commits-in-this-week/</guid>
+      <description>math/big: don&amp;rsquo;t force second arg to Jacobi and Int.ModSqrt to escape · golang/go@831f116 Goはコンパイル時のエスケープ解析で変数のアロケート場所がスタックとヒープに決まります。 このコミットはほんのちょっ</description>
+    </item>
+    
+    <item>
       <title>Go Commits in This Week at 2022-05-07</title>
       <link>https://warashi.dev/post/2022/05/07/go-commits-in-this-week/</link>
       <pubDate>Sat, 07 May 2022 08:10:50 +0900</pubDate>
