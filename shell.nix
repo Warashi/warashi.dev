@@ -1,6 +1,6 @@
 # save this as shell.nix
-{ pkgs ? import <nixpkgs> {}}:
+{ pkgs ? import <nixpkgs> { } }:
 
 pkgs.mkShell {
-  nativeBuildInputs = [ pkgs.hugo ];
+  nativeBuildInputs = with pkgs; [ hugo nodejs ];
 }
