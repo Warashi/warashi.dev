@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>© 2019 Copyright warashi</copyright>
-    <lastBuildDate>Sat, 14 May 2022 10:45:03 +0900</lastBuildDate><atom:link href="https://warashi.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 07:29:53 +0900</lastBuildDate><atom:link href="https://warashi.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Commits in This Week at 2022-05-21</title>
+      <link>https://warashi.dev/post/2022/05/23/go-commits-in-this-week/</link>
+      <pubDate>Mon, 23 May 2022 07:29:53 +0900</pubDate>
+      
+      <guid>https://warashi.dev/post/2022/05/23/go-commits-in-this-week/</guid>
+      <description>time: add Time.ZoneBounds ? golang/go@41b9d8c time.ZoneBounds という関数が追加されるようです。 テストコードも見たんですが、何をするための関数なのかよくわかりませんでした…。 net/http: allow sending 1xx responses ? golang/go@770e0e5 net/http で</description>
+    </item>
+    
     <item>
       <title>Go Commits in This Week at 2022-05-14</title>
       <link>https://warashi.dev/post/2022/05/14/go-commits-in-this-week/</link>
