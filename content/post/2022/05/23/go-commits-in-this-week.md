@@ -2,7 +2,7 @@
 title: "Go Commits in This Week at 2022-05-21"
 date: 2022-05-23T07:29:53+09:00
 tags: [Go]
-draft: true
+draft: false
 ---
 * [time: add Time.ZoneBounds ? golang/go@41b9d8c](https://github.com/golang/go/commit/41b9d8c75e45636a153c2a31d117196a22a7fc6c)
 `time.ZoneBounds` という関数が追加されるようです。
