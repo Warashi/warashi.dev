@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Warashi/warashi.github.io#readme",
   "devDependencies": {
-    "textlint": "^12.1.1",
+    "textlint": "^13.3.3",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0"
   }
 }
