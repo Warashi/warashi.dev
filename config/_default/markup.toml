@@ -13,5 +13,5 @@ codeFences = true
 guessSyntax = true
 hl_inline = true
 lineNos = true
-style = 'catppuccin-latte'
+style = 'catppuccin-frappe'
 tabWidth = 2
