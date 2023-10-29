@@ -1,0 +1,24 @@
+[[main]]
+name = 'Home'
+url = '/'
+weight = 1
+
+[[main]]
+name = 'about Warashi'
+url = '/about/'
+weight = 2
+
+[[main]]
+name = 'Blog'
+url = '/post/'
+weight = 3
+
+[[main]]
+name = 'Tags'
+url = '/tags/'
+weight = 4
+
+[[main]]
+name = 'Feed'
+url = '/index.xml'
+weight = 5

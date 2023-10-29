@@ -1,0 +1,14 @@
+theme = 'm10c'
+
+canonifyURLs = true
+cleanDestinationDir = true
+copyright = '© 2023 Copyright warashi'
+defaultContentLanguage = 'ja'
+enableEmoji = true
+enableGitInfo = true
+enableInlineShortcodes = true
+hasCJKLanguage = true
+languageCode = 'ja-JP'
+timeZone = 'Asia/Tokyo'
+title = '404 やる気 Not Found'
+titleCaseStyle = 'none'

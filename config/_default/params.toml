@@ -1,0 +1,14 @@
+author = 'ざしきわらし'
+avatar = 'images/tisza.png'
+description = 'ざしきわらしがいろいろ書いている場所です'
+menu_item_separator = '<br />'
+
+[[social]]
+icon = 'github'
+name = 'Warashi'
+url = 'https://github.com/Warashi'
+
+[[social]]
+icon = 'twitter'
+name = '@warashi___'
+url = 'https://twitter.com/warashi___'

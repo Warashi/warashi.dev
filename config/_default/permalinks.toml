@@ -1,0 +1,2 @@
+[page]
+post = '/post/:year/:month/:day/:filename/'
