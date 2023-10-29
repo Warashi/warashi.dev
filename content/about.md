@@ -7,4 +7,4 @@ tags: []
 ざしきわらし。名前の由来は大学時代にサークルのBOXに居座りすぎてまるでざしきわらしのようだと言われたことから。そのせいで留年を重ねたのはいい思い出。留年も悪くないよ。
 
 Github: [Warashi](https://github.com/Warashi)
-Twitter: [@warashi___](https://twitter.com/warashi___)
+𝕏: [@warashi___](https://x.com/warashi___)
