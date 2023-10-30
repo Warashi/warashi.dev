@@ -1,24 +1,29 @@
 [[main]]
 name = 'Home'
+pre = "<span data-feather='home'></span>"
 url = '/'
 weight = 1
 
 [[main]]
-name = 'about Warashi'
+name = 'About'
+pre = "<span data-feather='smile'></span>"
 url = '/about/'
 weight = 2
 
 [[main]]
-name = 'Blog'
+name = 'Posts'
+pre = "<span data-feather='book'></span>"
 url = '/post/'
 weight = 3
 
 [[main]]
 name = 'Tags'
+pre = "<span data-feather='tag'></span>"
 url = '/tags/'
 weight = 4
 
 [[main]]
 name = 'Feed'
+pre = "<span data-feather='rss'></span>"
 url = '/index.xml'
 weight = 5

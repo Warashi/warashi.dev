@@ -1,6 +1,7 @@
 ---
 categories: []
 date: "2017-04-29T20:15:58+09:00"
+type: post
 tags:
 - Go
 - 勉強会

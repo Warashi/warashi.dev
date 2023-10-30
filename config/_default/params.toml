@@ -1,14 +1,8 @@
 author = 'ざしきわらし'
-avatar = 'images/tisza.png'
+avatarURL = '/images/tisza.png'
 description = 'ざしきわらしがいろいろ書いている場所です'
-menu_item_separator = '<br />'
+showPostsOnHomePage = "recent"
 
-[[social]]
-icon = 'github'
-name = 'Warashi'
-url = 'https://github.com/Warashi'
-
-[[social]]
-icon = 'x'
-name = '@warashi___'
-url = 'https://x.com/warashi___'
+[[socialIcons]]
+name = "github"
+url = "https://github.com/Warashi"

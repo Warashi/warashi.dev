@@ -1,6 +1,7 @@
 ---
 categories: []
 date: "2017-04-22T09:03:51+09:00"
+type: post
 tags: []
 title: ブログはじめました
 ---

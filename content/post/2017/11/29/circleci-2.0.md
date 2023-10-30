@@ -1,6 +1,7 @@
 ---
 categories: []
 date: "2017-11-29T18:57:20+09:00"
+type: post
 tags: []
 title: CircleCI 2.0
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Go Commits in This Week at 2022-05-14"
 date: 2022-05-14T10:45:03+09:00
+type: post
 tags: [Go]
 draft: false
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Signed HTTP Exchanges (SXG) と Accelerated Mobile Pages (AMP)"
 date: 2019-03-16T11:33:29+09:00
+type: post
 tags: []
 ---
 

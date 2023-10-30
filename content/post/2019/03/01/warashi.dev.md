@@ -1,6 +1,7 @@
 ---
 title: "warashi.dev"
 date: 2019-03-01T21:03:15+09:00
+type: post
 tags: []
 ---
 

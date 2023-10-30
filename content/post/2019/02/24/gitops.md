@@ -1,5 +1,6 @@
 ---
 date: "2019-02-24T14:24:46+09:00"
+type: post
 title: GitOps
 ---
 
