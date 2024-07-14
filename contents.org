@@ -4,6 +4,7 @@
 * Posts
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: post
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'post
 :END:
 
 ** ブログはじめました
@@ -11,7 +12,6 @@
 :EXPORT_HUGO_SECTION_FRAG: 2017/04/22
 :EXPORT_FILE_NAME: blog_created
 :EXPORT_DATE: 2017-04-22T09:03:51+09:00
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'post
 :END:
 
 [[//gohugo.io][Hugo]] を使ってブログを始めました。
@@ -26,3 +26,108 @@ Theme には [[//github.com/pdevty/amp][AMP]] を使ってます。
 なんとなく ~circle.yml~ や環境変数にリポジトリ名を入れたくなかったのでこうなりました。
 
 どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。
+
+** 「そうだ Go、京都。」参加告報                                  :Go:勉強会:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION_FRAG: 2017/04/29
+:EXPORT_FILE_NAME: gokyoto
+:EXPORT_DATE: 2017-04-29T20:15:58+09:00
+:END:
+
+本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。
+
+*** LTじゃないやつ
+
+**** String::Random の Go 版を作った話 (by [[//twitter.com/t_snz][tさん]])
+[[//blog.yux3.net/entry/2017/05/01/014200][ご本人の解説記事]]
+
+[[//metacpan.org/pod/String::Random][String::Random]] という Perl のモジュールがあって、それを Go に移植したという話でした。
+実装はこちら ([[//github.com/t-mrt/gocha][gocha]])
+
+1. String::Random は正規表現に従ってランダムな文字列を生成するモジュールで、それをGoに移植するに当たってはじめは正規表現のパーサなどを実装していた。
+2. とりあえずの実装はできたが、Unicode文字プロパティなどの対応が大変。さてどうするか。
+3. **Goの標準ライブラリにはGoで書かれた正規表現エンジンがある。**
+4. Goの`regexp`パッケージはVMなので、それを利用して文字列生成をする。
+5. Unicode文字プロパティもiオプションも対応できた！
+
+**** 毎日 Go を書く (by [[//twitter.com/y_uuk1][yuukiさん]])
+githubの草を生やす活動を始めたので、それについての話とのこと
+
+***** 大事なこと
+- 1 commit / 1 day でもいいので毎日書くことが大事。継続は力なり。
+- モチベーションが大事なので、それが維持されるなら `git commit --date` もあり。ただしやり過ぎ厳禁。
+- 平日にはあまり時間がとれないので、土日に細かいIssueを用意しておいて平日に消化
+- 一つのプロジェクトだと行き詰まったときに継続できなくなるので複数のプロジェクトを持つ
+- 作るもののネタを見つけるのが大変
+  - 業務で課題を見つけてそれを汎用化して解くなど
+
+***** 利点
+- 脳内メモリに乗った状態が保持されるので、次に書くときに悩まない
+- 小さな変更を積み重ねる癖がつく
+- 無理すると続かないので無理しなくなる
+
+**** REST is not only (web) API interface (by [[//twitter.com/plan9user][kadotaさん]])
+[[//speakerdeck.com/lufia/rest-is-not-only-web-api-interface][資料]]
+
+プッシュ配信システムで REST API は辛いよ、とのこと
+
+どう辛いかというと、シンプルに 1 request / 1 message / 1 user とすると、大量の request が発生する。
+他のもの、たとえば gRPC, QraphQL などを使うことも検討に入れましょう。
+
+**** Go で軽量マークアップ言語のパーサを書く (by [[//twitter.com/aereal][aerealさん]])
+[[//b.hatena.ne.jp/aereal/2017gokyoto/][参考文献]]
+
+Go ではてな記法のパーサを書いたという話でした。
+実装はこちら ([[//github.com/aereal/go-text-hatena][go-text-hatena]])
+
+はてな記法にははっきりとした定義がなく、実装が定義。
+数えられるだけでも7つの実装がある。辛い。
+
+実装には、goyacc および `text/scanner` パッケージを用いている。
+インデントでネストを表現する場合はyaccでは辛いが、はてな記法はマーカ (+記号など) を重複させてネストを表現するという記法であり、それに助けられた。
+標準入力から受け取って、ASTをJSON形式で標準出力にはき出すのでツールから使いやすい。
+
+--------
+
+*** LT
+LTはメモ取ってなかったので完全に資料頼りの感想です。
+
+**** encoding/csv (by [[//twitter.com/pinzolo][pinzoloさん]])
+[[//speakerdeck.com/pinzolo/csv][資料]]
+
+`csv.Reader`, `csv.Writer` が `io.Reader`, `io.Writer` ではないのは知ってたんですが、改めて言われると不思議な感じですね。
+csvっぽい形式を読み込んだりすることはあったんですが、 encoding/csv は発表であったとおり融通がきかなくて使ってませんでした。
+というか、ちゃんとしたcsvじゃなくてそれっぽい形式を扱ってただけだったのが大きい。
+また使ってみようと思います。
+
+**** Server Push Middleware "Plasma" (by [[//twitter.com/stormcat24][stormcat24さん]])
+[[//speakerdeck.com/stormcat24/server-push-middleware-plasma][資料]]
+
+東京から来ててすごいなって思ったら天皇賞のついでらしかった。
+ポーリング撲滅のためにミドルウェアを作ったって話でした。
+作ったとはいうものの、実装は[[//twitter.com/upamune][インターン生]]がほぼ一人でやったとのこと。すごい。
+インターン生の書いたブログ記事は[[//upamune.hatenablog.com/entry/2017/04/07/165658][これ]]っぽい。
+
+**** パッケージの公開方法 (by [[//twitter.com/kwmt27][kwmt27さん]])
+[[//go-talks.appspot.com/github.com/kwmt/go-talks/2017/souda-kyoto-go.slide][資料]]
+
+なんと14:30ごろに参加申し込みしてLTなされている。すごい。
+パッケージの公開方法についての話でした。
+
+**** そうだ Go、再確認。 (by [[//twitter.com/qt_luigi][qt_luigiさん]])
+[[//speakerdeck.com/qt_luigi/souda-go-zai-que-ren][資料]]
+
+Go の基礎的な事柄に対するお話でした。
+再確認できてよかったです。
+
+**** Go 合宿 (by [[//twitter.com/maro_kt][maro_ktさん]])
+[[//go-beginners.connpass.com/event/47481/][Go合宿]]の参加報告でした。
+土善旅館はいいぞ。
+
+* Footnotes
+* COMMENT Local Variables                          :ARCHIVE:
+# Local Variables:
+# eval: (org-hugo-auto-export-mode)
+# End:
+
+
