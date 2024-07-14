@@ -1,0 +1,28 @@
+#+HUGO_BASE_DIR: .
+#+HUGO_AUTO_SET_LASTMOD: true
+
+* Posts
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: post
+:END:
+
+** ブログはじめました
+:PROPERTIES:
+:EXPORT_HUGO_SECTION_FRAG: 2017/04/22
+:EXPORT_FILE_NAME: blog_created
+:EXPORT_DATE: 2017-04-22T09:03:51+09:00
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'post
+:END:
+
+[[//gohugo.io][Hugo]] を使ってブログを始めました。
+ブログの生成元ファイル群は[[//github.com/Warashi/warashi.github.io][ここ]]にあります。
+[[//circleci.com][Circle CI]] を使って1リポジトリの複数ブランチでソースと生成結果を管理してます。
+よかったら参考にどうぞ。
+
+Theme には [[//github.com/pdevty/amp][AMP]] を使ってます。
+シンプルでよいテーマだと思います。
+
+ちょっとだけ説明しておくと、 ~public~ ディレクトリを ~submodule~ にしておいて、更新の直前で ~git checkout master~ するっていうなんとも変則的な方法を使ってます。
+なんとなく ~circle.yml~ や環境変数にリポジトリ名を入れたくなかったのでこうなりました。
+
+どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。
