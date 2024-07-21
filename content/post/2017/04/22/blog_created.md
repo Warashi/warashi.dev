@@ -2,7 +2,6 @@
 title = "ブログはじめました"
 author = ["warashi"]
 date = 2017-04-22T09:03:51+09:00
-lastmod = 2024-07-14T16:48:20+09:00
 draft = false
 type = "post"
 +++

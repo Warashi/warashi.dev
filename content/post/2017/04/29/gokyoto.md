@@ -2,7 +2,6 @@
 title = "「そうだ Go、京都。」参加告報"
 author = ["warashi"]
 date = 2017-04-29T20:15:58+09:00
-lastmod = 2024-07-21T10:01:01+09:00
 tags = ["Go", "勉強会"]
 draft = false
 type = "post"
