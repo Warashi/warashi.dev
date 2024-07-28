@@ -7,6 +7,27 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'post
 :END:
 
+** CircleCI 2.0
+:PROPERTIES:
+:EXPORT_HUGO_SECTION_FRAG: 2017/11/29
+:EXPORT_FILE_NAME: circleci
+:EXPORT_DATE: 2017-11-29T18:57:20+09:00
+:END:
+
+このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
+移行のためにDockerコンテナを作るところから始める、というちょっと面倒な事態になりましたが、なんとか移行完了したのでちょっと記事書くかなって感じです。
+
+まず先にこのブログのリポジトリ構成をちょっと書いておくと、sourceブランチにHugoに渡すMarkdownとかがあって、masterブランチには生成されたHTMLとかがある、という構成になってます。
+つまり、sourceブランチを取ってきて、Hugoを走らせて、結果public以下にできるファイル群をmasterブランチにpushすればいいことになります。
+
+これをするために作ったDockerコンテナの[[https://github.com/Warashi/docker-alpine-hugo-git-ssh-rsync][GitHubリポジトリがこちら]]。
+とりあえずalpineで、なんとなく使いそうだったコマンドを入れてある感じになります。
+
+そして、[[https://github.com/Warashi/warashi.github.io/blob/source/.circleci/config.yml][CircleCIの設定ファイルがこちら]]。
+これを参考にしてもらえば、このブログと同じことができるはずになってます。
+
+誰かの助けになれば幸いです。
+
 ** 「そうだ Go、京都。」参加告報                                  :Go:勉強会:
 :PROPERTIES:
 :EXPORT_HUGO_SECTION_FRAG: 2017/04/29
