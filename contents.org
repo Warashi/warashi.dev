@@ -1,4 +1,3 @@
-#+HUGO_BASE_DIR: .
 #+HUGO_AUTO_SET_LASTMOD: nil
 
 * Posts

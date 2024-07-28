@@ -1,14 +1,22 @@
 {
   description = "warashi.dev";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs = {
+  nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  flake-utils.url = "github:numtide/flake-utils";
+
+  gokarna = {
+    url = "github:526avijitgupta/gokarna";
+    flake = false;
+  };
+  };
 
   outputs = {
     self,
     nixpkgs,
     flake-utils,
-  }:
+    ...
+  }@inputs:
     flake-utils.lib.eachDefaultSystem
     (
       system: let
@@ -16,6 +24,9 @@
       in {
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [hugo nodejs go];
+        };
+        packages = pkgs.callPackage ./build.nix {
+          theme = inputs.gokarna;
         };
       }
     );

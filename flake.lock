@@ -18,6 +18,22 @@
         "type": "github"
       }
     },
+    "gokarna": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722001822,
+        "narHash": "sha256-5Hr6JpHtLW5n8TJLt2fCivMbC4D3l7P2aRHZb2Sm9I0=",
+        "owner": "526avijitgupta",
+        "repo": "gokarna",
+        "rev": "0976e9433da2db660203b9ae93ec55aee6312708",
+        "type": "github"
+      },
+      "original": {
+        "owner": "526avijitgupta",
+        "repo": "gokarna",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1720768451,
@@ -37,6 +53,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "gokarna": "gokarna",
         "nixpkgs": "nixpkgs"
       }
     },
