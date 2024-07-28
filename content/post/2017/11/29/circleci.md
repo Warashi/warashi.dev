@@ -3,7 +3,7 @@ title = "CircleCI 2.0"
 author = ["warashi"]
 date = 2017-11-29T18:57:20+09:00
 draft = false
-type = "post"
+aliases = ["/post/2017/11/29/circleci-2.0"]
 +++
 
 このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
