@@ -46,7 +46,7 @@ goroutineのプロファイルを取得するときの処理に改善が行わ�
 おそらく ~runtime/pprof~ でプロファイルを取得するときのSTWも減っているはずなので、いままでよりも気軽にプロファイルを取得できるようになりますね。
 
 *** [[https://github.com/golang/go/commit/f52b4ec63d6ce5c4eb9edcb81c3a0661e6f53da0][cmd/compile: enable Asan check for global variables · golang/go@f52b4ec · GitHub]]
-[runtime: enable address sanitizer in Go · Issue ***44853 · golang/go · GitHub](https://github.com/golang/go/issues/44853) に紐付くコミットで、address sanitizerを使ってグローバル変数へのだめなアクセスを検出するオプションが追加されたようです。
+[runtime: enable address sanitizer in Go · Issue #44853 · golang/go · GitHub](https://github.com/golang/go/issues/44853) に紐付くコミットで、address sanitizerを使ってグローバル変数へのだめなアクセスを検出するオプションが追加されたようです。
 
 *** [[https://github.com/golang/go/commit/ffe48e00adf3078944015186819a1ed5c6aa8bec][sync/atomic: add typed atomic values · golang/go@ffe48e0 · GitHub]]
 ~sync/atomic~ packageに以下の型が追加され、atomicであることが型レベルで保証できるようになりました。

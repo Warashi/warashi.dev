@@ -53,7 +53,7 @@ goroutineのプロファイルを取得するときの処理に改善が行わ�
 
 ## [cmd/compile: enable Asan check for global variables · golang/go@f52b4ec · GitHub](https://github.com/golang/go/commit/f52b4ec63d6ce5c4eb9edcb81c3a0661e6f53da0) {#cmd-compile-enable-asan-check-for-global-variables-golang-go-f52b4ec-github}
 
-[runtime: enable address sanitizer in Go · Issue \*\*\*44853 · golang/go · GitHub](<https://github.com/golang/go/issues/44853>) に紐付くコミットで、address sanitizerを使ってグローバル変数へのだめなアクセスを検出するオプションが追加されたようです。
+[runtime: enable address sanitizer in Go · Issue #44853 · golang/go · GitHub](<https://github.com/golang/go/issues/44853>) に紐付くコミットで、address sanitizerを使ってグローバル変数へのだめなアクセスを検出するオプションが追加されたようです。
 
 
 ## [sync/atomic: add typed atomic values · golang/go@ffe48e0 · GitHub](https://github.com/golang/go/commit/ffe48e00adf3078944015186819a1ed5c6aa8bec) {#sync-atomic-add-typed-atomic-values-golang-go-ffe48e0-github}
