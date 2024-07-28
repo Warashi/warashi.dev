@@ -1,8 +1,12 @@
 [goldmark]
+[goldmark.renderer]
+hardWraps = true
+unsafe = true
+
 [goldmark.extensions]
 [goldmark.extensions.cjk]
-eastAsianLineBreaks = true
 enable = true
+eastAsianLineBreaks = true
 escapedSpace = true
 
 [highlight]
