@@ -2,7 +2,7 @@ theme = 'gokarna'
 
 canonifyURLs = true
 cleanDestinationDir = true
-copyright = '© 2023 Copyright warashi'
+copyright = '© 2024 Copyright warashi'
 defaultContentLanguage = 'ja'
 enableEmoji = true
 enableGitInfo = false
