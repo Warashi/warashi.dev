@@ -1,8 +1,10 @@
----
-date: "2019-02-24T14:24:46+09:00"
-type: post
-title: GitOps
----
++++
+title = "GitOps"
+author = ["warashi"]
+date = 2019-02-24T14:24:46+09:00
+draft = false
+type = "post"
++++
 
 このブログ更新するのすごい久しぶりだ…… :thinking:
 
