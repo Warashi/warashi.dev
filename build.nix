@@ -50,7 +50,7 @@
           nodejs
         ];
       } ''
-        hugo --minify --noBuildLock --environment production --baseURL ${baseURL} --source ${./.} --theme theme --themesDir ${themes.outPath} --contentDir ${contents.outPath} --destination $out
+        hugo --minify --noBuildLock --environment production --baseURL ${baseURL} --source ${./.} --theme theme --themesDir ${themes.outPath} --contentDir ${contents.outPath}/content --destination $out
       '') {};
   };
 in {
