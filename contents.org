@@ -124,6 +124,19 @@ Theme には [[//github.com/pdevty/amp][AMP]] を使ってます。
 
 どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。
 
+** about Warashi
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: .
+:EXPORT_FILE_NAME: about
+:EXPORT_DATE: 2000-01-01T00:00:00+09:00
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'page
+:END:
+
+ざしきわらし。名前の由来は大学時代にサークルのBOXに居座りすぎてまるでざしきわらしのようだと言われたことから。そのせいで留年を重ねたのはいい思い出。留年も悪くないよ。
+
+GitHub: [[https://github.com/Warashi][Warashi]]
+X: [[https://x.com/warashi___][@warashi___]]
+
 * Footnotes
 * COMMENT Local Variables                          :ARCHIVE:
 # Local Variables:
