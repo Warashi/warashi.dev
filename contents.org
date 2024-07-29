@@ -1,4 +1,5 @@
 #+HUGO_AUTO_SET_LASTMOD: nil
+#+HUGO_LOCALE: ja
 
 * Posts
 :PROPERTIES:
@@ -262,7 +263,7 @@ AMP PackagerのREADMEにも書いてありますが、Reverse Proxyでの処理�
 :EXPORT_HUGO_SECTION_FRAG: 2019/03/01
 :EXPORT_FILE_NAME: warashi-dev
 :EXPORT_DATE: 2019-03-01T21:03:15+09:00
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases '("/post/2019/03/01/warashi.dev")
+:EXPORT_HUGO_ALIASES: /post/2019/03/01/warashi.dev
 :END:
 
 なんとなく ~.dev~ ドメインが話題になっていたので、独自ドメインを取得しました。
@@ -293,7 +294,7 @@ GitOpsというやつを知って、やってみたいなって思ったんで�
 :EXPORT_HUGO_SECTION_FRAG: 2017/11/29
 :EXPORT_FILE_NAME: circleci
 :EXPORT_DATE: 2017-11-29T18:57:20+09:00
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases '("/post/2017/11/29/circleci-2.0")
+:EXPORT_HUGO_ALIASES: /post/2017/11/29/circleci-2.0
 :END:
 
 このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
