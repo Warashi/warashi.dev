@@ -13,7 +13,7 @@ weight = 2
 [[main]]
 name = 'Posts'
 pre = "<span data-feather='book'></span>"
-url = '/post/'
+url = '/posts/'
 weight = 3
 
 [[main]]
