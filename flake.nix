@@ -2,21 +2,23 @@
   description = "warashi.dev";
 
   inputs = {
-  nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
 
-  gokarna = {
-    url = "github:526avijitgupta/gokarna";
-    flake = false;
-  };
+    theme = {
+      url = "github:526avijitgupta/gokarna";
+      flake = false;
+    };
   };
 
   outputs = {
-    self,
     nixpkgs,
     flake-utils,
+    theme,
     ...
-  }@inputs:
+  } @ inputs: let
+    baseURL = "https://warashi.dev/";
+  in
     flake-utils.lib.eachDefaultSystem
     (
       system: let
@@ -26,7 +28,7 @@
           nativeBuildInputs = with pkgs; [hugo nodejs go];
         };
         packages = pkgs.callPackage ./build.nix {
-          theme = inputs.gokarna;
+          inherit theme baseURL;
         };
       }
     );

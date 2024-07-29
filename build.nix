@@ -2,9 +2,9 @@
   pkgs,
   lib,
   theme,
+  baseURL,
   ...
 }: let
-  baseURL = "https://warashi.dev/";
   callPackage = lib.callPackageWith (pkgs // packages);
   packages = {
     contents = callPackage ({
