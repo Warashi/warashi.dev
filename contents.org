@@ -9,9 +9,9 @@
 
 ** Go Commits in This Week at 2022-05-21                                 :Go:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2022/05/23
-:EXPORT_FILE_NAME: go-commits-in-this-week
 :EXPORT_DATE: 2022-05-23T07:29:53+09:00
+:EXPORT_FILE_NAME: dc6303e6-1bc4-4f4c-9b8a-779d299ad156
+:EXPORT_HUGO_ALIASES: /post/2022/05/23/go-commits-in-this-week
 :END:
 
 *** [[https://github.com/golang/go/commit/41b9d8c75e45636a153c2a31d117196a22a7fc6c][time: add Time.ZoneBounds ? golang/go@41b9d8c]]
@@ -28,9 +28,9 @@ net/http で 1xx 系のレスポンスを返せるようにする変更です。
 
 ** Go Commits in This Week at 2022-05-14                                 :Go:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2022/05/14
-:EXPORT_FILE_NAME: go-commits-in-this-week
 :EXPORT_DATE: 2022-05-14T10:45:03+09:00
+:EXPORT_FILE_NAME: dda38367-165d-4061-85ac-f2e6b3227249
+:EXPORT_HUGO_ALIASES: /post/2022/05/14/go-commits-in-this-week
 :END:
 
 *** [[https://github.com/golang/go/commit/831f1168289e65a7ef49942ad8d16cf14af2ef43][math/big: don't force second arg to Jacobi and Int.ModSqrt to escape · golang/go@831f116]]
@@ -80,9 +80,9 @@ ARM64 において、switch-caseでジャンプテーブルが使われるよう
 
 ** Go Commits in This Week at 2022-05-07                                 :Go:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2022/05/07
-:EXPORT_FILE_NAME: go-commits-in-this-week
 :EXPORT_DATE: 2022-05-07T08:10:50+09:00
+:EXPORT_FILE_NAME: 78620327-d47a-46bd-b0b6-dd313dcedeaf
+:EXPORT_HUGO_ALIASES: /post/2022/05/07/go-commits-in-this-week
 :END:
 
 [[https://github.com/golang/go]] に今週あったコミットのうち、僕の目にとまったもをの書いていきます。
@@ -157,9 +157,9 @@ MD5はもう暗号や署名の用途で大丈夫なハッシュではなくな�
 
 ** Go Commits in this Week at 2022-04-30                                 :Go:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2022/04/30
-:EXPORT_FILE_NAME: go-commits-in-this-week
 :EXPORT_DATE: 2022-04-30T11:43:23+09:00
+:EXPORT_FILE_NAME: f04043e4-a05b-4f5f-90a2-fe05e6f8e395
+:EXPORT_HUGO_ALIASES: /post/2022/04/30/go-commits-in-this-week
 :END:
 
 [[https://github.com/golang/go]] に今週あったコミットのうち、僕の目にとまったもをの書いていきます。
@@ -212,9 +212,9 @@ ref; [[https://forest.watch.impress.co.jp/docs/news/1404405.html][「Git for Win
 
 ** Signed HTTP Exchanges (SXG) と Accelerated Mobile Pages (AMP)
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2019/03/16
-:EXPORT_FILE_NAME: sxg_and_amppackager
 :EXPORT_DATE: 2019-03-16T11:33:29+09:00
+:EXPORT_FILE_NAME: a1f6a656-dea7-42e4-8355-d9fc056c7ccf
+:EXPORT_HUGO_ALIASES: /post/2019/03/16/sxg_and_amppackager
 :END:
 
 まだDraftなんですが、 Signed HTTP Exchanges という規格があります。
@@ -260,10 +260,10 @@ AMP PackagerのREADMEにも書いてありますが、Reverse Proxyでの処理�
 
 ** warashi.dev
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2019/03/01
-:EXPORT_FILE_NAME: warashi-dev
 :EXPORT_DATE: 2019-03-01T21:03:15+09:00
-:EXPORT_HUGO_ALIASES: /post/2019/03/01/warashi.dev
+:EXPORT_FILE_NAME: 0d3499d9-e8c5-43a0-92ec-1824c7a1ec8b
+:EXPORT_HUGO_ALIASES: /post/2019/03/01/warashi-dev
+:+EXPORT_HUGO_ALIASES: /post/2019/03/01/warashi.dev
 :END:
 
 なんとなく ~.dev~ ドメインが話題になっていたので、独自ドメインを取得しました。
@@ -273,9 +273,9 @@ Aレコードを設定する方法だと、Github PagesのIPアドレスが変�
 
 ** GitOps
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2019/02/24
-:EXPORT_FILE_NAME: gitops
 :EXPORT_DATE: 2019-02-24T14:24:46+09:00
+:EXPORT_FILE_NAME: 59aefada-6c0f-4f2d-b6ae-8fbf3dcfd73d
+:EXPORT_HUGO_ALIASES: /post/2019/02/24/gitops
 :END:
 
 このブログ更新するのすごい久しぶりだ…… :thinking:
@@ -291,10 +291,10 @@ GitOpsというやつを知って、やってみたいなって思ったんで�
 
 ** CircleCI 2.0
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2017/11/29
-:EXPORT_FILE_NAME: circleci
 :EXPORT_DATE: 2017-11-29T18:57:20+09:00
-:EXPORT_HUGO_ALIASES: /post/2017/11/29/circleci-2.0
+:EXPORT_FILE_NAME: 098a5a46-6607-4240-86ce-75078f2bece8
+:EXPORT_HUGO_ALIASES: /post/2017/11/29/circleci
+:+EXPORT_HUGO_ALIASES: /post/2017/11/29/circleci-2.0
 :END:
 
 このブログのHTML生成にはCircleCIでHugoを動かしているんですが、今までCircleCIのバージョン1を使っていたのをバージョン2に移行しました。
@@ -312,9 +312,9 @@ GitOpsというやつを知って、やってみたいなって思ったんで�
 誰かの助けになれば幸いです。
 ** 「そうだ Go、京都。」参加告報                                  :Go:勉強会:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2017/04/29
-:EXPORT_FILE_NAME: gokyoto
 :EXPORT_DATE: 2017-04-29T20:15:58+09:00
+:EXPORT_FILE_NAME: 0ee66a0d-098a-4928-b53e-29e30aa91104
+:EXPORT_HUGO_ALIASES: /post/2017/04/29/gokyoto
 :END:
 
 本日、はてなさんで開かれた Go の勉強会に参加してきましたので、備忘録も兼ねて内容をメモしておこうと思います。
@@ -409,9 +409,9 @@ Go の基礎的な事柄に対するお話でした。
 
 ** ブログはじめました
 :PROPERTIES:
-:EXPORT_HUGO_SECTION_FRAG: 2017/04/22
-:EXPORT_FILE_NAME: blog_created
 :EXPORT_DATE: 2017-04-22T09:03:51+09:00
+:EXPORT_FILE_NAME: 2b642e78-f28c-4563-9e75-45559201eb5c
+:EXPORT_HUGO_ALIASES: /post/2017/04/22/blog_created
 :END:
 
 [[//gohugo.io][Hugo]] を使ってブログを始めました。
@@ -427,7 +427,7 @@ Theme には [[//github.com/pdevty/amp][AMP]] を使ってます。
 
 どんなことを書くかはまだ未定ですが、やる気の起きた日に更新していきます。
 
-** about Warashi
+* about Warashi
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: .
 :EXPORT_FILE_NAME: about
