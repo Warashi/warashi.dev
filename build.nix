@@ -10,12 +10,12 @@
     contents = callPackage ({
       runCommand,
       emacsPackagesFor,
-      emacs-nox,
+      emacs,
     }:
       runCommand "contents" {
         src = ./contents.org;
         nativeBuildInputs = [
-          ((emacsPackagesFor emacs-nox).emacsWithPackages (epkgs:
+          ((emacsPackagesFor emacs).emacsWithPackages (epkgs:
             with epkgs; [
               org
               ox-hugo
