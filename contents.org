@@ -7,6 +7,66 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type 'post
 :END:
 
+** ox-hugoとnixでブログをビルドする                           :nix:emacs:org:
+:PROPERTIES:
+:EXPORT_DATE: 2024-08-02T20:45:00+09:00
+:EXPORT_FILE_NAME: d979a10f-58e7-40d0-b86e-a52dd8b096ba
+:END:
+
+*** この記事で扱う大きなトピック
+**** Emacs org-mode および ox-hugo
+皆さんご存知の Emacs には org-mode というツール？が備わっています。
+org-mode は markdown などのマークアップ言語の一種である org という形式を扱うものです。
+この org-mode は Emacs の機能や拡張によって様々な形式で出力することができ、 ox-hugo という拡張を使うと Hugo という静的サイト生成のツールに適した出力ができます。
+この記事では、その org-mode および ox-hugo を使ってブログサイトを構築する一つの方法を紹介します。
+
+**** nix および nix flakes
+最近僕が普段の環境構築などで利用しているツールに nix というものがあります。
+nix は言語の名前でもあり、ツールチェインの名前でもあり、 NixOS という名前で Linux のディストリビューションにもなっています。
+その nix は言語としてはいわゆる関数型言語の一種で、ツールチェインとしては宣言的に、つまり入力さえ一致すれば出力も完全に一致する形で色々なものをビルドすることができるツールです。
+その nix に flakes という機能があります。これはまだ experimental なのですが、最近はよく使われているみたいなのでこれから破壊的変更が入るというのはあまり考えにくい機能です。
+僕が方法を知らないだけかもしれませんが、従来の nix では入力を完全に固定することがむつかしいです。
+そこで、入力の git commit hash や内容のハッシュ値をを lock ファイルに記述する形で再現性をもたせる仕組みがついたのが flakes です。
+
+この記事で紹介するブログサイトの構築方法では、この flakes を用いてブログサイトのビルド結果に再現性を持たせる試みをしています。
+
+*** 環境構築
+**** Emacs
+実は、ビルド時には後述する nix flakes の機能で Emacs を用意するため、記事を執筆する時に Emacs を利用しないのであればインストールする必要はありません。
+つまり、ビルド時に使う Emacs はお好みの方法で用意すれば大丈夫です。
+
+**** nix
+nix のインストールはいくつかの方法がありますが、個人的には [[https://github.com/DeterminateSystems/nix-installer][DeterminateSystems/nix-installer]] によるインストールがおすすめです。
+こちらのインストーラーを使うと、気に入らなかった時にアンインストールするのが楽なためです。
+
+*** org ファイルの書き方
+[[https://github.com/Warashi/warashi.dev/blob/2f4dc388fc58a6d849f0086cf96afd58b577db46/contents.org][このブログを構築している org ファイル]]を参考にしてもらえればいいと思います。
+もっとちゃんと知りたいよーという肩は、[[https://ox-hugo.scripter.co/][ox-hugo の公式サイト]]をご覧ください。
+
+*** flake.nix について
+[[https://github.com/Warashi/warashi.dev/blob/2f4dc388fc58a6d849f0086cf96afd58b577db46/build.nix][このブログを構築しているnixファイル]]では、ビルドを3段階に分けています。
+
+1. ox-hugo による markdown ファイルのビルド
+2. inputs （大体 flakes の依存関係だと思えばいいです） の一つとして指定したテーマファイルの配置
+3. hugo による html ファイルのビルド
+
+リンクしているのは flake.nix から呼び出している build.nix ですが、シェルスクリプトが書いてあるところを読めばざっくり理解できる...かも？
+
+*** 実際にブログをビルドしてみる
+この記事を含むブログを実際にビルドしてみましょう。
+以下のコマンドで ~result~ というシンボリックリンクができ、その先に hugo によってビルドされたファイル一式が配置されています。
+
+#+begin_src sh
+  git clone https://github.com/Warashi/warashi.dev.git
+  cd warashi.dev
+  nix build
+#+end_src
+
+*** まとめ
+途中から雑になってしまいましたが、ox-hugoとnixを用いてブログをビルドする方法を紹介しました。
+この方法を使うと中間生成ファイルを気にすることなく、またビルドの再現性についてもあまり気にすることなく org-mode でブログをビルドすることができます。
+良かったらぜひ試してみてください。
+
 ** Go Commits in This Week at 2022-05-21                                 :Go:
 :PROPERTIES:
 :EXPORT_DATE: 2022-05-23T07:29:53+09:00
