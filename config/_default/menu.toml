@@ -20,15 +20,16 @@
   name = 'times'
   pre = "<span data-feather='watch'></span>"
   url = 'https://times.warashi.dev/'
+  weight = 4
 
 [[main]]
   name = 'Tags'
   pre = "<span data-feather='tag'></span>"
   url = '/tags/'
-  weight = 4
+  weight = 5
 
 [[main]]
   name = 'Feed'
   pre = "<span data-feather='rss'></span>"
   url = '/index.xml'
-  weight = 5
+  weight = 6
