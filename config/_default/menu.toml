@@ -17,7 +17,7 @@
   weight = 3
 
 [[main]]
-  name = '#times'
+  name = 'times'
   pre = "<span data-feather='watch'></span>"
   url = 'https://times.warashi.dev/'
 
