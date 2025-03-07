@@ -37,6 +37,13 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Place AGE_SECRET_KEY
+        env:
+          AGE_SECRET_KEY: ${{ secrets.AGE_SECRET_KEY }}
+          AGE_SECRET_KEY_FILE: ${{ runner.temp }}/age_secret_key
+        run: |
+          echo "$AGE_SECRET_KEY" > $AGE_SECRET_KEY_FILE
+          echo "AGE_SECRET_KEY_FILE=$AGE_SECRET_KEY_FILE" >> $GITHUB_ENV
       - name: Build
         run: nix run
       - name: Upload artifact

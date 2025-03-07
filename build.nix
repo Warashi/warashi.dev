@@ -34,7 +34,7 @@ let
         name = "decrypt";
         runtimeInputs = [ age ];
         text = ''
-          age -d -i "''${AGE_SECRET_KEY:-$HOME/.emacs.d/age/secret-key}" -o contents.org contents.org.age
+          age -d -i "''${AGE_SECRET_KEY_FILE:-$HOME/.emacs.d/age/secret-key}" -o contents.org contents.org.age
         '';
       }
     ) { };
