@@ -24,12 +24,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Install Nix
         uses: cachix/install-nix-action@v30
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Cachix Use
+        uses: cachix/cachix-action@v15
+        with:
+          name: nix-community
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
