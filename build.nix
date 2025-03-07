@@ -12,14 +12,13 @@ let
       {
         runCommand,
         emacsPackagesFor,
-        emacs29-nox,
-        emacs ? emacs29-nox,
+        emacs-nox,
       }:
       runCommand "contents"
         {
           src = ./contents.org;
           nativeBuildInputs = [
-            ((emacsPackagesFor emacs).emacsWithPackages (
+            ((emacsPackagesFor emacs-nox).emacsWithPackages (
               epkgs: with epkgs; [
                 org
                 ox-hugo
