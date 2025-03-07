@@ -12,8 +12,8 @@ let
       {
         runCommand,
         emacsPackagesFor,
-        emacs-nox,
-        emacs ? emacs-nox,
+        emacs29-nox,
+        emacs ? emacs29-nox,
       }:
       runCommand "contents"
         {
