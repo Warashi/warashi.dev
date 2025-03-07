@@ -4,6 +4,12 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
 
     theme = {
       url = "github:526avijitgupta/gokarna";
@@ -11,25 +17,35 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    flake-utils,
-    theme,
-    ...
-  } @ inputs: let
-    baseURL = "https://warashi.dev/";
-  in
-    flake-utils.lib.eachDefaultSystem
-    (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in {
+  outputs =
+    {
+      nixpkgs,
+      flake-utils,
+      emacs-overlay,
+      theme,
+      ...
+    }:
+    let
+      baseURL = "https://warashi.dev/";
+    in
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ emacs-overlay.overlays.default ];
+        };
+      in
+      {
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [hugo nodejs go];
+          packages = with pkgs; [
+            hugo
+            nodejs
+            go
+            nixfmt-rfc-style
+          ];
         };
-        packages = pkgs.callPackage ./build.nix {
-          inherit theme baseURL;
-        };
+        packages = pkgs.callPackage ./build.nix { inherit theme baseURL; };
       }
     );
 }
