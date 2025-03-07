@@ -21,7 +21,7 @@ let
           decrypt
         ];
         text = ''
-          decrypt && git add -fN contents.org && nix build; git rm -f contents.org
+          decrypt && git add -fN contents.org && nix build '.#public'; git rm -f contents.org
         '';
       }
     ) { };
