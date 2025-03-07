@@ -8,6 +8,36 @@
 let
   callPackage = lib.callPackageWith (pkgs // packages);
   packages = {
+    build = callPackage (
+      {
+        writeShellApplication,
+        decrypt,
+        nix,
+      }:
+      writeShellApplication {
+        name = "build";
+        runtimeInputs = [
+          nix
+          decrypt
+        ];
+        text = ''
+          decrypt && git add -fN contents.org && nix build; git rm -f contents.org
+        '';
+      }
+    ) { };
+    decrypt = callPackage (
+      {
+        writeShellApplication,
+        age,
+      }:
+      writeShellApplication {
+        name = "decrypt";
+        runtimeInputs = [ age ];
+        text = ''
+          age -d -i "''${AGE_SECRET_KEY:-$HOME/.emacs.d/age/secret-key}" -o contents.org contents.org.age
+        '';
+      }
+    ) { };
     contents = callPackage (
       {
         runCommand,
@@ -63,5 +93,5 @@ let
 in
 packages
 // {
-  default = packages.public;
+  default = packages.build;
 }
