@@ -61,7 +61,7 @@ let
     ) { };
   };
 in
-{
-  inherit packages;
+packages
+// {
   default = packages.public;
 }
