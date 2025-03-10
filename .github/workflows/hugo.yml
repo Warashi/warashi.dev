@@ -31,7 +31,7 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Cachix Use
-        uses: cachix/cachix-action@v15
+        uses: cachix/cachix-action@v16
         with:
           name: nix-community
       - name: Setup Pages
