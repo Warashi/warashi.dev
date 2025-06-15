@@ -34,7 +34,7 @@ jobs:
           hugo-version: '0.147.8'
           extended: true
       - name: Build
-        run: hugo --minify --environment production --baseURL "https://warashi.dev" --source source
+        run: hugo --minify --environment production --baseURL "https://warashi.dev"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
