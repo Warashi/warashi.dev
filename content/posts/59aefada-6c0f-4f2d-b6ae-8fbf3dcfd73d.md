@@ -1,6 +1,5 @@
 +++
 title = "GitOps"
-author = ["太宰晋之介"]
 date = 2019-02-24T14:24:46+09:00
 aliases = ["/post/2019/02/24/gitops"]
 draft = false

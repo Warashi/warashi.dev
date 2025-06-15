@@ -1,6 +1,5 @@
 +++
 title = "about Warashi"
-author = ["太宰晋之介"]
 date = 2000-01-01T00:00:00+09:00
 draft = false
 type = "page"
