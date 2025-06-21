@@ -1,9 +1,0 @@
-author = 'ざしきわらし'
-avatarURL = '/images/tisza.png'
-description = 'ざしきわらしがいろいろ書いている場所です'
-showPostsOnHomePage = "recent"
-dateFormat = "2006-01-02"
-
-[[socialIcons]]
-name = "github"
-url = "https://github.com/Warashi"
