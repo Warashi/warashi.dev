@@ -1,0 +1,15 @@
+site:
+  title: '404 やる気 Not Found'
+  navigation:
+    - text: 'ホーム'
+      href: '/'
+      icon: 'mdi:home'
+    - text: 'about'
+      href: '/about'
+      icon: 'mdi:account'
+    - text: '記事一覧'
+      href: '/posts'
+      icon: 'mdi:file-document-multiple'
+    - text: 'タグ'
+      href: '/tags'
+      icon: 'mdi:tag-multiple'
